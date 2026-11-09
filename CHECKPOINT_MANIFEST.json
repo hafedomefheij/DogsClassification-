@@ -1,0 +1,26 @@
+{
+  "schema": "one entry per stored checkpoint group; sha256 lists are kept in the files named under 'hashes'",
+  "updated_utc": "2026-11-09T11:20Z",
+  "git_commit_of_code": "347ac3f90dee0ee84a4a73bdce4df06f32fdbed3",
+  "checkpoint_contents_required_for_study2": [
+    "model weights (trainable part)", "optimizer state", "scheduler state", "AMP scaler state",
+    "epoch and global step", "python / numpy / torch / cuda RNG states", "full configuration",
+    "dataset split id (manifest SHA-256)", "best validation metrics so far", "git commit of the code"
+  ],
+  "study1": [
+    {
+      "group": "Study 1 frozen-head checkpoints (best.pt) and prediction arrays, all nine experiments",
+      "storage": [
+        "owner's Google Drive: My Drive/DogBreed-PhD-Research/work/experiments/<experiment>/<run>/",
+        "Kaggle notebook output, version 'GPU resume run 2026-11-09' (kaggle_results_full.tar, sha256 82fbbd4f...)",
+        "Drive: kaggle_in/kaggle_results_full.tar of the second Kaggle run (sha256 44670d50..., 1,205,340,160 bytes)"
+      ],
+      "hashes": [
+        "results/kaggle_merge/merge_rerun_20261109_095417.tsv (315 files: size, sha256, record checked against)",
+        "experiments/<experiment>/freeze.json on Drive (sha256 of each frozen best.pt)"
+      ],
+      "restore_verified": "yes for the 315 merged files (read back from the work folder and the mirror, 2026-11-09 09:54-09:56 UTC)"
+    }
+  ],
+  "study2": []
+}
