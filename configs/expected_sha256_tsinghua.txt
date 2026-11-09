@@ -1,0 +1,3 @@
+2281c9fcda27734866c1fca3d44278c4dba9583779498270f1dc150dac90d30a  TrainValSplit.zip
+89d1c44d1d3a98955715c70b537afa6f2ebbd64f160e34e65862f3fd38ddee2a  low-annotations.zip
+9dd6543cadcf8dd9d8bd4d7745d22794f3e98f4b626cb2ed71f712bcf539a8fe  low-resolution.zip

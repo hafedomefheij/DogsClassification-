@@ -1,0 +1,34 @@
+# Main study: Tsinghua Dogs (130 breeds), frozen DINOv2 ViT-B/14 with registers, 224 px.
+#
+# Features: g = [CLS; mean patch] at full width (1536); the 256 patch tokens as the first
+# 128 of 256 principal components (PCA fitted on training images only, features/.../pca.json).
+# Protocol: the learning rate of every head is chosen on seed 0 by validation top-1
+# (run_heads.py --select-lr); seeds 0-2 are then trained at that lr. The test split is not
+# read by any of this; final_eval.py evaluates once, after selection.
+#
+# Groups:
+#   baselines B0-B2   linear, attentive probe, class attention over all classes
+#   query controls    rr_class (no centring), rr_center (global centring),
+#                     rr_random (a random shortlist)  -- same parameters as the proposed heads
+#   proposed          rr_rival (own shortlist), rr_rival_soft, rr_pairwise
+name: tsinghua_main
+dataset: tsinghua
+backbone: dinov2_vitb14_reg
+img_size: 224
+feature_tag: pca256
+token_dims: 128
+views: [orig, hflip]
+max_device_fraction: 0.85     # 7.7 GB of training tokens must stay on the 15 GB T4
+seeds: [0, 1, 2]
+common: {epochs: 30, batch_size: 256, patience: 8}
+runs:
+  - {tag: linear, head: {name: linear}}
+  - {tag: attnprobe, head: {name: attnprobe}}
+  - {tag: classattn_all, head: {name: classattn_all}}
+  - {tag: rr_class, head: {name: rerank, mode: class, k: 5}}
+  - {tag: rr_center, head: {name: rerank, mode: center, k: 5}}
+  - {tag: rr_random, head: {name: rerank, mode: random, k: 5}}
+  - {tag: rr_rival, head: {name: rerank, mode: rival, k: 5}}
+  - {tag: rr_rival_soft, head: {name: rerank, mode: rival_soft, k: 5}}
+  - {tag: rr_pairwise, head: {name: rerank, mode: pairwise, k: 5}}
+lr_grid: [3.0e-4, 1.0e-3, 3.0e-3]

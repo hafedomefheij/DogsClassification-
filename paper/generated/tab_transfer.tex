@@ -1,0 +1,16 @@
+\begin{tabular}{lrrrr}
+\toprule
+Head (trained on Tsinghua Dogs) & Top-1 & Top-5 & Top-1, mapped breeds only & Stage-1 top-1 \\
+\midrule
+Linear probe (B0) & 78.14{\scriptsize$\,\pm\,$0.16} & 94.62{\scriptsize$\,\pm\,$0.21} & 78.83{\scriptsize$\,\pm\,$0.18} & -- \\
+Attentive probe (B1) & 78.38{\scriptsize$\,\pm\,$0.53} & 94.83{\scriptsize$\,\pm\,$0.65} & 79.14{\scriptsize$\,\pm\,$0.37} & -- \\
+Class attention, all classes (B2) & 78.31{\scriptsize$\,\pm\,$0.37} & 94.86{\scriptsize$\,\pm\,$0.51} & 78.97{\scriptsize$\,\pm\,$0.42} & -- \\
+Re-rank: class query & 79.00{\scriptsize$\,\pm\,$0.43} & 94.52{\scriptsize$\,\pm\,$0.12} & 79.72{\scriptsize$\,\pm\,$0.43} & 78.38{\scriptsize$\,\pm\,$0.30} \\
+Re-rank: centred query & 78.59{\scriptsize$\,\pm\,$0.12} & 94.38{\scriptsize$\,\pm\,$0.30} & 79.34{\scriptsize$\,\pm\,$0.18} & 78.08{\scriptsize$\,\pm\,$0.21} \\
+Re-rank: random rivals & 78.49{\scriptsize$\,\pm\,$0.21} & 94.76{\scriptsize$\,\pm\,$0.37} & 79.07{\scriptsize$\,\pm\,$0.16} & 78.14{\scriptsize$\,\pm\,$0.43} \\
+RCEA: rival & 78.86{\scriptsize$\,\pm\,$0.36} & 94.93{\scriptsize$\,\pm\,$0.26} & 79.38{\scriptsize$\,\pm\,$0.46} & 78.21{\scriptsize$\,\pm\,$0.31} \\
+RCEA: rival-soft & 79.75{\scriptsize$\,\pm\,$0.54} & 94.96{\scriptsize$\,\pm\,$0.21} & 80.20{\scriptsize$\,\pm\,$0.66} & 77.97{\scriptsize$\,\pm\,$0.52} \\
+RCEA: pairwise & 79.17{\scriptsize$\,\pm\,$0.16} & 94.76{\scriptsize$\,\pm\,$0.27} & 79.79{\scriptsize$\,\pm\,$0.16} & 78.28{\scriptsize$\,\pm\,$0.16} \\
+\bottomrule
+\end{tabular}
+% 973 de-duplicated Stanford test images of 120 breeds

@@ -1,0 +1,15 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{Body box} & \multicolumn{3}{c}{Head box} & \\
+Head & Top-1 & mass & area & lift & mass & area & lift & $H/H_{\mathrm{unif}}$ \\
+\midrule
+Attentive probe (B1) & 86.2 & 86.3 & 79.9 & 1.15 & 38.9 & 29.4 & 1.72 & 0.972 \\
+Class attention, all classes (B2) & 86.0 & 74.1 & 79.9 & 0.90 & 24.8 & 29.4 & 0.80 & 0.977 \\
+Re-rank: class query & 86.6 & 90.2 & 79.9 & 1.23 & 51.7 & 29.4 & 2.54 & 0.785 \\
+Re-rank: centred query & 86.6 & 88.7 & 79.9 & 1.22 & 47.5 & 29.4 & 2.63 & 0.727 \\
+RCEA: rival & 86.5 & 76.2 & 79.9 & 0.95 & 26.8 & 29.4 & 0.93 & 0.969 \\
+RCEA: rival-soft & 87.0 & 80.2 & 79.9 & 1.02 & 32.1 & 29.4 & 1.24 & 0.962 \\
+RCEA: pairwise & 86.7 & 76.2 & 79.9 & 0.94 & 26.8 & 29.4 & 0.92 & 0.976 \\
+\bottomrule
+\end{tabular}
+% attention mass inside the ground-truth boxes (evaluation only), seed 0, test

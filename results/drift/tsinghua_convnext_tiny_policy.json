@@ -1,0 +1,7 @@
+{
+  "experiment": "tsinghua_convnext_tiny",
+  "rule_max_abs_top1_diff": 0.001,
+  "observed_max_abs_top1_diff": 0.0,
+  "runs_checked": 6,
+  "decision": "keep finished runs, train only the missing ones"
+}

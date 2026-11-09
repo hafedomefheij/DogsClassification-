@@ -1,0 +1,10 @@
+# Queue A: Tsinghua-sized training jobs (about 9 GB of tokens on the GPU each), one at a time.
+# Run: nohup bash scripts/queue.sh configs/queues/a.txt > /content/work/logs/queue_a.log 2>&1 &
+wait_main | while pgrep -f "[r]un_experiment.sh configs/experiments/tsinghua_main.yaml" >/dev/null; do sleep 60; done
+ablate | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_ablate.yaml
+openset_split | cd /content/DogBreed-PhD-Research && python -I scripts/make_openset_split.py --dataset tsinghua --unknown 30 --seed 0
+openset | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_openset.yaml
+wait_bb | while [ ! -e /content/work/logs/queue_b/extract_clip_vitb16.done ] && [ ! -e /content/work/logs/queue_b/extract_clip_vitb16.failed ]; do sleep 60; done
+tok32 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_tok32.yaml
+tok64 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_tok64.yaml
+END

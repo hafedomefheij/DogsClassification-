@@ -1,0 +1,23 @@
+# The Google Colab runtime that produced every result in this repository (2026-11-08, free-tier NVIDIA T4).
+# The direct dependencies, pinned from `python -m pip freeze` on that VM. The full freeze (723 lines: 722
+# requirements and pip's comment on the editable install) is requirements-colab-full.txt in this repository,
+# recovered on 2026-11-09 from the Google Drive backup (MyDrive/DogBreed-PhD-Research/work/, written 21:28:56 UTC).
+#
+# Python 3.13.16; torch 2.14.1+cu130 (CUDA 13.0; torch.backends.cudnn.version() = 92800);
+# GPU: Tesla T4, 15,360 MiB, driver 580.82.07.
+# The +cu130 builds come from the PyTorch index:
+#   pip install -r requirements-colab.txt --extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.1+cu130
+torchvision==0.29.1+cu130
+timm==1.0.31
+safetensors==0.8.0
+numpy==2.4.6
+scipy==1.16.3
+scikit-learn==1.6.1
+pandas==2.2.3
+matplotlib==3.10.0
+pillow==11.3.0
+PyYAML==6.0.3
+tqdm==4.67.3
+psutil==5.9.5
+pytest==8.4.2

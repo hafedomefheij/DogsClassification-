@@ -1,0 +1,29 @@
+\begin{tabular}{lrrr}
+\toprule
+Head & All test images (5,200) & Stanford-origin (3,115) & Independent (1,362) \\
+\midrule
+Linear probe (B0) & 86.26{\scriptsize$\,\pm\,$0.21} & 87.70{\scriptsize$\,\pm\,$0.14} & 81.38{\scriptsize$\,\pm\,$0.68} \\
+Attentive probe (B1) & 86.26{\scriptsize$\,\pm\,$0.02} & 87.61{\scriptsize$\,\pm\,$0.12} & 81.60{\scriptsize$\,\pm\,$0.31} \\
+Class attention, all classes (B2) & 86.28{\scriptsize$\,\pm\,$0.29} & 87.75{\scriptsize$\,\pm\,$0.18} & 81.30{\scriptsize$\,\pm\,$0.36} \\
+Re-rank: class query & 86.71{\scriptsize$\,\pm\,$0.10} & 88.07{\scriptsize$\,\pm\,$0.07} & 82.01{\scriptsize$\,\pm\,$0.19} \\
+Re-rank: centred query & 86.49{\scriptsize$\,\pm\,$0.17} & 87.78{\scriptsize$\,\pm\,$0.07} & 81.86{\scriptsize$\,\pm\,$0.45} \\
+Re-rank: random rivals & 86.43{\scriptsize$\,\pm\,$0.21} & 87.81{\scriptsize$\,\pm\,$0.23} & 81.67{\scriptsize$\,\pm\,$0.28} \\
+RCEA: rival & 86.74{\scriptsize$\,\pm\,$0.23} & 88.10{\scriptsize$\,\pm\,$0.18} & 82.08{\scriptsize$\,\pm\,$0.38} \\
+RCEA: rival-soft & 87.12{\scriptsize$\,\pm\,$0.15} & 88.44{\scriptsize$\,\pm\,$0.29} & 82.70{\scriptsize$\,\pm\,$0.35} \\
+RCEA: pairwise & 86.80{\scriptsize$\,\pm\,$0.12} & 88.05{\scriptsize$\,\pm\,$0.15} & 82.21{\scriptsize$\,\pm\,$0.28} \\
+\midrule
+\multicolumn{4}{l}{\emph{Paired differences in pp, mean over seeds (rule of \S8)}} \\
+rival-soft $-$ class$^\dagger$ & +0.41 (n.s.) & +0.37 (n.s.) & +0.69 (n.s.) \\
+rival-soft $-$ B2 & +0.84 ($>$) & +0.70 (n.s.) & +1.39 ($>$) \\
+rival-soft $-$ B0 & +0.86 ($>$) & +0.74 ($>$) & +1.32 ($>$) \\
+rival $-$ class & +0.03 (n.s.) & +0.03 (n.s.) & +0.07 (n.s.) \\
+rival $-$ centre & +0.25 (n.s.) & +0.32 (n.s.) & +0.22 (n.s.) \\
+rival $-$ random & +0.31 (n.s.) & +0.29 (n.s.) & +0.42 (n.s.) \\
+pairwise $-$ class & +0.08 (n.s.) & -0.02 (n.s.) & +0.20 (n.s.) \\
+pairwise $-$ rival & +0.06 (n.s.) & -0.05 (n.s.) & +0.12 (n.s.) \\
+rival $-$ B2 & +0.46 ($>$) & +0.35 (n.s.) & +0.78 ($>$) \\
+rival $-$ B0 & +0.47 ($>$) & +0.40 (n.s.) & +0.71 (n.s.) \\
+class $-$ B0 & +0.45 (n.s.) & +0.36 (n.s.) & +0.64 (n.s.) \\
+\bottomrule
+\end{tabular}
+% test top-1 (%); Stanford-origin = confirmed Stanford Dogs copy (in ImageNet-1k train); independent = no candidate match at all

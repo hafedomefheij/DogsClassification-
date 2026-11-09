@@ -1,0 +1,47 @@
+# Datasets are never committed (licences; download them with scripts/download_data.sh)
+/data/
+# Large transfer bundles and local send folders
+/kaggle_upload/
+/for_supervisor/
+dist/chunks/
+# Local runs and default output folders (real outputs live on Drive / Kaggle; see CHECKPOINT_MANIFEST.json)
+/experiments/
+/checkpoints/
+/figures/
+/features/
+/work/
+# Model weights and arrays never go into Git history
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+# Python / tooling
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+# LaTeX build products (the PDF is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.blg
+paper/*.bbl
+paper/*.toc
+paper/*.synctex.gz
+# Secrets must never be committed
+.env
+*.pem
+kaggle.json

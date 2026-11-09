@@ -1,0 +1,21 @@
+# Open set with truly held-out breeds: 30 of the 130 Tsinghua breeds, drawn at random with seed 0
+# (scripts/make_openset_split.py), are removed from training and validation. scripts/ood_eval.py then
+# scores the test images of the 100 known breeds (in-distribution) against those of the 30 unknown ones.
+# Learning rates: those selected in tsinghua_main (no tuning on the known-breed subset).
+name: tsinghua_openset
+dataset: tsinghua
+backbone: dinov2_vitb14_reg
+img_size: 224
+feature_tag: pca256
+token_dims: 128
+views: [orig, hflip]
+max_device_fraction: 0.85
+class_subset: configs/openset/tsinghua_unknown30_s0.json
+seeds: [0, 1, 2]
+lr_selection_from: tsinghua_main
+common: {epochs: 30, batch_size: 256, patience: 8}
+runs:
+  - {tag: linear, head: {name: linear}}
+  - {tag: rr_class, head: {name: rerank, mode: class, k: 5}}
+  - {tag: rr_rival, head: {name: rerank, mode: rival, k: 5}}
+  - {tag: rr_pairwise, head: {name: rerank, mode: pairwise, k: 5}}

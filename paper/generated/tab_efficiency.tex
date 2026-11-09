@@ -1,0 +1,18 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+Part & Params & FLOPs / image & ms (b=1) & ms (b=256) & Peak MB (b=256) & Pipeline ms (b=1) \\
+\midrule
+Backbone (frozen, fp16) & 85,727,232 & 47.1 G & 8.4 & 243 (b=64) & 765 & -- \\
+\midrule
+Linear probe (B0) & 202,882 & 0.4 M & 0.09 & 0.1 & 410 & 7.8 \\
+Attentive probe (B1) & 404,866 & 35.3 M & 0.43 & 6.4 & 644 & 8.3 \\
+Class attention, all classes (B2) & 302,211 & 68.0 M & 0.53 & 14.7 & 929 & 8.7 \\
+Re-rank: class query & 302,211 & 35.3 M & 0.62 & 6.4 & 620 & 8.4 \\
+Re-rank: centred query & 302,211 & 35.3 M & 0.70 & 6.4 & 621 & 8.6 \\
+Re-rank: random rivals & 302,211 & 35.3 M & 0.75 & 6.5 & 623 & 8.5 \\
+RCEA: rival & 302,211 & 35.3 M & 0.76 & 6.6 & 624 & 8.2 \\
+RCEA: rival-soft & 302,211 & 35.3 M & 0.86 & 6.5 & 625 & 8.6 \\
+RCEA: pairwise & 302,211 & 39.2 M & 1.03 & 8.1 & 666 & 9.1 \\
+\bottomrule
+\end{tabular}
+% device Tesla T4; FLOPs from torch.utils.flop_counter (a multiply-add = 2 FLOPs; G = 1e9, M = 1e6); median of 50 timed passes after 10 warm-up passes

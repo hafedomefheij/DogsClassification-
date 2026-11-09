@@ -1,0 +1,21 @@
+\begin{tabular}{lr}
+\toprule
+Cross-dataset audit (Tsinghua vs Stanford) & Count \\
+\midrule
+Candidate pairs & 155,728 \\
+Confirmed pairs & 19,081 \\
+Tsinghua images with a confirmed Stanford copy & 18,675 \\
+Stanford images with a confirmed Tsinghua copy & 18,578 \\
+Confirmed pairs with the same breed name & 98.8\% \\
+Stanford test images confirmed in Tsinghua train/val & 6,482 \\
+Clean Stanford test images (no candidate in Tsinghua train/val) & 973 \\
+Confirmed pairs by split: &  \\
+\quad Tsinghua test / Stanford test & 1,305 \\
+\quad Tsinghua test / Stanford train & 1,869 \\
+\quad Tsinghua train / Stanford test & 6,003 \\
+\quad Tsinghua train / Stanford train & 8,280 \\
+\quad Tsinghua val / Stanford test & 678 \\
+\quad Tsinghua val / Stanford train & 946 \\
+\bottomrule
+\end{tabular}
+% confirmed = pHash Hamming <= 8 and cosine >= 0.85, or cosine >= 0.97 (DINOv2 global descriptors)

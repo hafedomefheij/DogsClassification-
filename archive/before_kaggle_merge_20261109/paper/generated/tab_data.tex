@@ -1,0 +1,11 @@
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Split used} & \multicolumn{2}{c}{Removed} & \multicolumn{3}{c}{Duplicates} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-8}\cmidrule(lr){9-11}
+Dataset & Images & Train & Val & Test & Excl. & Train dup. of test & Undecodable & Exact groups & Near pairs (train--test) & Label conflicts \\
+\midrule
+Tsinghua Dogs & 70,428 & 58,627 & 6,515 & 5,200 & 86 & 86 & 0 & 114 & 700 (87) & 113 \\
+Stanford Dogs & 20,580 & 10,728 & 1,199 & 8,580 & 73 & 73 & 0 & 89 & 156 (74) & 48 \\
+\bottomrule
+\end{tabular}
+% within-dataset audit: SHA-1 exact, pHash Hamming <= 4 near

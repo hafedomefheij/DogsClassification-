@@ -1,0 +1,20 @@
+# Backbone study: ConvNeXt-T, supervised ImageNet-1k (torchvision IMAGENET1K_V1); 49 tokens (7 x 7 x 768).
+# Same protocol as tsinghua_main (orig + hflip views, PCA-256 tokens of which the first 128 are used,
+# learning rate selected per head on seed 0 by validation top-1, then seeds 0-2), heads restricted to
+# the baseline, the class-query control and the two proposed queries.
+name: tsinghua_convnext_tiny
+dataset: tsinghua
+backbone: convnext_tiny
+img_size: 224
+feature_tag: pca256
+token_dims: 128
+views: [orig, hflip]
+max_device_fraction: 0.85
+seeds: [0, 1, 2]
+common: {epochs: 30, batch_size: 256, patience: 8}
+runs:
+  - {tag: linear, head: {name: linear}}
+  - {tag: rr_class, head: {name: rerank, mode: class, k: 5}}
+  - {tag: rr_rival, head: {name: rerank, mode: rival, k: 5}}
+  - {tag: rr_pairwise, head: {name: rerank, mode: pairwise, k: 5}}
+lr_grid: [3.0e-4, 1.0e-3, 3.0e-3]

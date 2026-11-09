@@ -1,0 +1,16 @@
+\begin{tabular}{lrrr}
+\toprule
+Head & tsinghua main & stanford main & tsinghua resnet50 \\
+\midrule
+Linear probe (B0) & 0.0003 & 0.0003 & 0.0003 \\
+Attentive probe (B1) & 0.0003 & 0.0003 & -- \\
+Class attention, all classes (B2) & 0.0003 & 0.0003 & -- \\
+Re-rank: class query & 0.0003 & 0.0003 & 0.0003 \\
+Re-rank: centred query & 0.0003 & 0.0003 & -- \\
+Re-rank: random rivals & 0.0003 & 0.0003 & -- \\
+RCEA: rival & 0.0003 & 0.0003 & 0.0003 \\
+RCEA: rival-soft & 0.0003 & 0.0003 & -- \\
+RCEA: pairwise & 0.0003 & 0.0003 & 0.0003 \\
+\bottomrule
+\end{tabular}
+% learning rate chosen on validation top-1, seed 0, from {3e-4, 1e-3, 3e-3}

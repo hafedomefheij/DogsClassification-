@@ -1,0 +1,16 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Head & Pair errors & Acc. on pair breeds & Top-1 & Gain on pairs & Gain overall \\
+\midrule
+Linear probe (B0) & 160.3 & 71.70 & 86.26 & +0.00 & +0.00 \\
+Attentive probe (B1) & 153.0 & 72.65 & 86.26 & +0.94 & +0.00 \\
+Class attention, all classes (B2) & 159.7 & 71.99 & 86.28 & +0.29 & +0.02 \\
+Re-rank: class query & 156.3 & 72.39 & 86.71 & +0.69 & +0.45 \\
+Re-rank: centred query & 155.0 & 72.03 & 86.49 & +0.33 & +0.22 \\
+Re-rank: random rivals & 156.7 & 72.10 & 86.43 & +0.40 & +0.17 \\
+RCEA: rival & 152.3 & 72.86 & 86.74 & +1.16 & +0.47 \\
+RCEA: rival-soft & 152.7 & 73.04 & 87.12 & +1.34 & +0.86 \\
+RCEA: pairwise & 149.0 & 73.26 & 86.80 & +1.56 & +0.53 \\
+\bottomrule
+\end{tabular}
+% the 20 breed pairs most confused by the linear probe on VALIDATION; gains vs B0 in pp

@@ -1,0 +1,19 @@
+[18:15:22] GET https://cg.cs.tsinghua.edu.cn/ThuDogs/TrainValSplit.zip -> /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/TrainValSplit.zip
+[18:15:25] OK /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/TrainValSplit.zip 198475 bytes
+[18:15:25] GET https://cg.cs.tsinghua.edu.cn/ThuDogs/low-annotations.zip -> /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-annotations.zip
+[18:18:12] OK /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-annotations.zip 37326330 bytes
+[18:18:12] GET https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1 -> /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-resolution.zip
+curl: (18) end of response with 2645596175 bytes missing
+[18:19:15] attempt 1 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+curl: (18) end of response with 1335193583 bytes missing
+[18:31:03] attempt 2 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+curl: (18) end of response with 1319956919 bytes missing
+[18:32:09] attempt 3 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+curl: (18) end of response with 1170518423 bytes missing
+[18:33:57] attempt 4 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+curl: (18) end of response with 1051967695 bytes missing
+[18:36:18] attempt 5 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+curl: (18) end of response with 933704399 bytes missing
+[18:38:13] attempt 6 failed for https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1; retrying in 30 s
+FAILED https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1
+DOWNLOADS FAILED (tsinghua)

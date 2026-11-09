@@ -1,0 +1,22 @@
+# Pipeline smoke test: a few images per breed, small input, 2 epochs. Correctness only --
+# the numbers it prints mean nothing.
+name: smoke
+dataset: tsinghua
+backbone: dinov2_vits14_reg
+img_size: 112
+feature_tag: pca32
+views: [orig, hflip]
+seeds: [0, 1]
+common: {epochs: 2, batch_size: 64, patience: 5, eval_batch_size: 256}
+runs:
+  - {tag: linear, head: {name: linear}}
+  - {tag: attnprobe, head: {name: attnprobe}}
+  - {tag: classattn_all, head: {name: classattn_all}}
+  - {tag: rr_class, head: {name: rerank, mode: class, k: 5}}
+  - {tag: rr_center, head: {name: rerank, mode: center, k: 5}}
+  - {tag: rr_random, head: {name: rerank, mode: random, k: 5}}
+  - {tag: rr_rival, head: {name: rerank, mode: rival, k: 5}}
+  - {tag: rr_rival_soft, head: {name: rerank, mode: rival_soft, k: 5}}
+  - {tag: rr_pairwise, head: {name: rerank, mode: pairwise, k: 5}}
+  - {tag: rr_rival_cand, head: {name: rerank, mode: rival, k: 5}, loss: candidate}
+lr_grid: [1.0e-3, 3.0e-3]

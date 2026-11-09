@@ -1,0 +1,9 @@
+# Queue C: the three other backbones, run beside queue A (moved unchanged from a.txt at 21:24 UTC).
+# Run: setsid nohup bash scripts/queue.sh configs/queues/c.txt > /content/work/logs/queue_c.log 2>&1 < /dev/null &
+# wait_b was added after the recorded run, for a fresh start of all three queues at once: in the recorded run
+# queue B had finished its extractions (20:41) before queue C started (21:24), so it would have passed at once.
+wait_b | while [ ! -e /content/work/logs/queue_b/extract_clip_vitb16.done ] && [ ! -e /content/work/logs/queue_b/extract_clip_vitb16.failed ]; do sleep 60; done
+bb_resnet50 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_resnet50.yaml
+bb_convnext_tiny | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_convnext_tiny.yaml
+bb_clip_vitb16 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_clip_vitb16.yaml
+END

@@ -1,0 +1,19 @@
+{
+  "stamp": "20261109_095417",
+  "host": "938312eb283b",
+  "archive": "/content/kaggle_in/kaggle_results_full.tar",
+  "archive_bytes": 1205340160,
+  "archive_sha256": "44670d508592c721616cd49dd4fd8e709901591ffaf30196b7aba41665df48aa",
+  "files": 315,
+  "written": 630,
+  "already_present": 0,
+  "checked_by": {
+    "freeze.json": 93,
+    "freeze.json (seed-0 copy)": 8,
+    "no recorded hash": 16,
+    "summary.json": 117,
+    "test_metrics_orig.json": 81
+  },
+  "work": "/content/work",
+  "mirror": "/content/drive/MyDrive/DogBreed-PhD-Research/work"
+}

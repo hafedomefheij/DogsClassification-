@@ -1,0 +1,11 @@
+skip (done): /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/TrainValSplit.zip
+skip (done): /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-annotations.zip
+[18:39:27] GET https://cloud.tsinghua.edu.cn/f/80013ef29c5f42728fc8/?dl=1 -> /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-resolution.zip
+curl: (18) end of response with 912071431 bytes missing
+[18:40:08] attempt 1 stopped at 1752911856 bytes; resuming in 10 s
+curl: (18) end of response with 187324615 bytes missing
+[18:49:56] attempt 2 stopped at 2477658672 bytes; resuming in 10 s
+curl: (18) end of response with 17286695 bytes missing
+[18:52:20] attempt 3 stopped at 2647696592 bytes; resuming in 10 s
+[18:52:55] OK /c/Users/ECS/Documents/DogBreed-PhD-Research/data/raw/tsinghua_dogs/low-resolution.zip 2664983287 bytes
+DOWNLOADS DONE (tsinghua)

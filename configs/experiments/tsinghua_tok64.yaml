@@ -1,0 +1,17 @@
+# Token width ablation: the first 64 (instead of 128) of the 256 train-fitted principal components
+# of the DINOv2 tokens. Same protocol as tsinghua_main; learning rates taken from it.
+name: tsinghua_tok64
+dataset: tsinghua
+backbone: dinov2_vitb14_reg
+img_size: 224
+feature_tag: pca256
+token_dims: 64
+views: [orig, hflip]
+max_device_fraction: 0.85
+seeds: [0, 1, 2]
+lr_selection_from: tsinghua_main
+common: {epochs: 30, batch_size: 256, patience: 8}
+runs:
+  - {tag: attnprobe, head: {name: attnprobe}}
+  - {tag: rr_class, head: {name: rerank, mode: class, k: 5}}
+  - {tag: rr_rival, head: {name: rerank, mode: rival, k: 5}}

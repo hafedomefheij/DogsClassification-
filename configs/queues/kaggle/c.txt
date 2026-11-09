@@ -1,0 +1,9 @@
+# Kaggle, GPU 1: the ConvNeXt-T and CLIP caches rebuilt (orig and hflip; saved token PCA reused), the finished
+# ConvNeXt-T runs checked on the rebuilt validation features and kept or set aside by the resume rule, then the
+# two backbone jobs of c.txt, unchanged (the ConvNeXt-T job refuses to start until the resume rule has been applied).
+extract_convnext_tiny_k | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua convnext_tiny /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+extract_clip_vitb16_k | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua clip_vitb16 /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+drift_convnext | cd /content/DogBreed-PhD-Research && python -I scripts/feature_drift_check.py --experiment tsinghua_convnext_tiny --out /content/work/results/drift/tsinghua_convnext_tiny.json && python -I scripts/resume_policy.py --experiment tsinghua_convnext_tiny --drift /content/work/results/drift/tsinghua_convnext_tiny.json
+bb_convnext_tiny | cd /content/DogBreed-PhD-Research && test -e /content/work/results/drift/tsinghua_convnext_tiny_policy.json && bash scripts/run_experiment.sh configs/experiments/tsinghua_convnext_tiny.yaml
+bb_clip_vitb16 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_clip_vitb16.yaml
+END

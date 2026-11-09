@@ -1,0 +1,81 @@
+{
+  "experiment": "tsinghua_convnext_tiny",
+  "split": "val",
+  "n_images": 6515,
+  "cache": "/content/features/tsinghua/convnext_tiny_224_pca256/orig",
+  "summary_excluding_random": {
+    "runs": 6,
+    "max_abs_top1_diff": 0.0,
+    "mean_top1_diff": 0.0,
+    "max_changed_share": 0.0,
+    "mean_changed_share": 0.0
+  },
+  "runs": [
+    {
+      "run": "linear_lr0.0003_s0",
+      "tag": "linear_lr0.0003",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8564850345356869,
+      "top1_now": 0.8564850345356869,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.037340641021728516
+    },
+    {
+      "run": "linear_lr0.001_s0",
+      "tag": "linear_lr0.001",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8532617037605525,
+      "top1_now": 0.8532617037605525,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.038039445877075195
+    },
+    {
+      "run": "linear_lr0.003_s0",
+      "tag": "linear_lr0.003",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8557175748273216,
+      "top1_now": 0.8557175748273216,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.05531120300292969
+    },
+    {
+      "run": "rr_class_lr0.0003_s0",
+      "tag": "rr_class_lr0.0003",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8627782041442824,
+      "top1_now": 0.8627782041442824,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.03141903877258301
+    },
+    {
+      "run": "rr_class_lr0.001_s0",
+      "tag": "rr_class_lr0.001",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8598618572524942,
+      "top1_now": 0.8598618572524942,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.03362774848937988
+    },
+    {
+      "run": "rr_class_lr0.003_s0",
+      "tag": "rr_class_lr0.003",
+      "seed": 0,
+      "random_control": false,
+      "top1_then": 0.8511128165771297,
+      "top1_now": 0.8511128165771297,
+      "changed_images": 0,
+      "changed_share": 0.0,
+      "max_abs_logit_diff": 0.07055485248565674
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Head & Params & Top-1 & Top-5 & Macro-P & Macro-R & Macro-F1 & NLL$_{\mathrm{TS}}$ & ECE$_{\mathrm{TS}}$ (\%) \\
+\midrule
+\multicolumn{9}{l}{\emph{Baselines}} \\
+Linear probe (B0) & 202,882 & 86.26{\scriptsize$\,\pm\,$0.21} & 98.49{\scriptsize$\,\pm\,$0.03} & 88.19{\scriptsize$\,\pm\,$0.10} & 86.26{\scriptsize$\,\pm\,$0.21} & 86.23{\scriptsize$\,\pm\,$0.28} & 0.480{\scriptsize$\,\pm\,$0.009} & 1.26{\scriptsize$\,\pm\,$0.15} \\
+Attentive probe (B1) & 404,866 & 86.26{\scriptsize$\,\pm\,$0.02} & 98.58{\scriptsize$\,\pm\,$0.09} & 88.20{\scriptsize$\,\pm\,$0.05} & 86.26{\scriptsize$\,\pm\,$0.02} & 86.33{\scriptsize$\,\pm\,$0.05} & 0.479{\scriptsize$\,\pm\,$0.004} & 1.61{\scriptsize$\,\pm\,$0.23} \\
+Class attention, all classes (B2) & 302,211 & 86.28{\scriptsize$\,\pm\,$0.29} & 98.53{\scriptsize$\,\pm\,$0.16} & 88.25{\scriptsize$\,\pm\,$0.15} & 86.28{\scriptsize$\,\pm\,$0.29} & 86.26{\scriptsize$\,\pm\,$0.32} & 0.482{\scriptsize$\,\pm\,$0.008} & 1.48{\scriptsize$\,\pm\,$0.10} \\
+\multicolumn{9}{l}{\emph{Equal-size controls}} \\
+Re-rank: class query & 302,211 & 86.71{\scriptsize$\,\pm\,$0.10} & 98.56{\scriptsize$\,\pm\,$0.09} & 88.39{\scriptsize$\,\pm\,$0.03} & 86.71{\scriptsize$\,\pm\,$0.10} & 86.71{\scriptsize$\,\pm\,$0.10} & 0.466{\scriptsize$\,\pm\,$0.001} & 1.32{\scriptsize$\,\pm\,$0.30} \\
+Re-rank: centred query & 302,211 & 86.49{\scriptsize$\,\pm\,$0.17} & 98.45{\scriptsize$\,\pm\,$0.04} & 88.22{\scriptsize$\,\pm\,$0.11} & 86.49{\scriptsize$\,\pm\,$0.17} & 86.45{\scriptsize$\,\pm\,$0.24} & 0.470{\scriptsize$\,\pm\,$0.008} & 1.27{\scriptsize$\,\pm\,$0.04} \\
+Re-rank: random rivals & 302,211 & 86.43{\scriptsize$\,\pm\,$0.21} & 98.55{\scriptsize$\,\pm\,$0.10} & 88.28{\scriptsize$\,\pm\,$0.09} & 86.43{\scriptsize$\,\pm\,$0.21} & 86.41{\scriptsize$\,\pm\,$0.29} & 0.472{\scriptsize$\,\pm\,$0.011} & 1.47{\scriptsize$\,\pm\,$0.29} \\
+\multicolumn{9}{l}{\emph{Proposed (RCEA)}} \\
+RCEA: rival & 302,211 & 86.74{\scriptsize$\,\pm\,$0.23} & 98.55{\scriptsize$\,\pm\,$0.08} & 88.36{\scriptsize$\,\pm\,$0.13} & 86.74{\scriptsize$\,\pm\,$0.23} & 86.66{\scriptsize$\,\pm\,$0.27} & 0.467{\scriptsize$\,\pm\,$0.009} & 1.45{\scriptsize$\,\pm\,$0.14} \\
+RCEA: rival-soft & 302,211 & \textbf{87.12{\scriptsize$\,\pm\,$0.15}} & 98.53{\scriptsize$\,\pm\,$0.05} & 88.52{\scriptsize$\,\pm\,$0.19} & 87.12{\scriptsize$\,\pm\,$0.15} & 87.00{\scriptsize$\,\pm\,$0.24} & 0.461{\scriptsize$\,\pm\,$0.009} & 1.40{\scriptsize$\,\pm\,$0.53} \\
+RCEA: pairwise & 302,211 & 86.80{\scriptsize$\,\pm\,$0.12} & 98.46{\scriptsize$\,\pm\,$0.04} & 88.34{\scriptsize$\,\pm\,$0.09} & 86.80{\scriptsize$\,\pm\,$0.12} & 86.76{\scriptsize$\,\pm\,$0.17} & 0.463{\scriptsize$\,\pm\,$0.003} & 1.16{\scriptsize$\,\pm\,$0.27} \\
+\bottomrule
+\end{tabular}
+% tsinghua_main, clean test split, mean and std over seeds

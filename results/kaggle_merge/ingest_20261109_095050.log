@@ -1,0 +1,13 @@
+kaggle_results_small.tar: OK
+[09:50:50] archive: kaggle_results_small.tar
+[09:50:50] registry: 89 new rows
+[09:50:56] replaced in /content/drive/MyDrive/DogBreed-PhD-Research/work (old copies in /content/drive/MyDrive/DogBreed-PhD-Research/work/before_kaggle/20261109_095050)
+kaggle_results_small.tar: OK
+[09:50:57] replaced in /content/work (old copies in /content/work/before_kaggle/20261109_095050)
+tsinghua_unknown30_s0.json
+[09:51:06] digest rc=0
+[09:51:10] tables rc=0
+[09:51:36] figures rc=0
+[09:51:36] new digest on Drive (the old one in before_kaggle/20261109_095050/results/digest)
+[09:51:38] INGEST END rc=0 stamp=20261109_095050
+INGEST-EXIT 0

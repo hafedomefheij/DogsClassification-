@@ -1,0 +1,618 @@
+{
+ "cross_tsinghua_stanford": {
+  "backbone": "dinov2_vitb14_reg",
+  "candidate_pairs": 155728,
+  "confirmed_by_split": {
+   "test|test": 1305,
+   "test|train": 1869,
+   "train|test": 6003,
+   "train|train": 8280,
+   "val|test": 678,
+   "val|train": 946
+  },
+  "confirmed_pairs": 19081,
+  "confirmed_same_breed_name": 0.9883129814999214,
+  "confirmed_stanford_images": 18578,
+  "confirmed_tsinghua_images": 18675,
+  "feature_tag": "pca256",
+  "n_stanford": 20580,
+  "n_tsinghua": 70428,
+  "nn_cos_quantiles": {
+   "0.5": 0.7442866563796997,
+   "0.9": 1.0,
+   "0.99": 1.0000003576278687,
+   "0.999": 1.0000004768371582
+  },
+  "nn_phash_quantiles": {
+   "0.001": 0.0,
+   "0.01": 0.0,
+   "0.1": 0.0,
+   "0.5": 14.0
+  },
+  "rule": {
+   "cos_alone": 0.97,
+   "cos_pair": 0.85,
+   "phash_dist": 8
+  },
+  "sensitivity": [
+   {
+    "cos_ge": 0.8,
+    "pairs": 18731,
+    "phash_le": 4,
+    "stanford_images": 18574,
+    "tsinghua_images": 18616
+   },
+   {
+    "cos_ge": 0.85,
+    "pairs": 18731,
+    "phash_le": 4,
+    "stanford_images": 18574,
+    "tsinghua_images": 18616
+   },
+   {
+    "cos_ge": 0.9,
+    "pairs": 18731,
+    "phash_le": 4,
+    "stanford_images": 18574,
+    "tsinghua_images": 18616
+   },
+   {
+    "cos_ge": 0.95,
+    "pairs": 18726,
+    "phash_le": 4,
+    "stanford_images": 18573,
+    "tsinghua_images": 18613
+   },
+   {
+    "cos_ge": 0.8,
+    "pairs": 18791,
+    "phash_le": 6,
+    "stanford_images": 18574,
+    "tsinghua_images": 18627
+   },
+   {
+    "cos_ge": 0.85,
+    "pairs": 18791,
+    "phash_le": 6,
+    "stanford_images": 18574,
+    "tsinghua_images": 18627
+   },
+   {
+    "cos_ge": 0.9,
+    "pairs": 18791,
+    "phash_le": 6,
+    "stanford_images": 18574,
+    "tsinghua_images": 18627
+   },
+   {
+    "cos_ge": 0.95,
+    "pairs": 18778,
+    "phash_le": 6,
+    "stanford_images": 18573,
+    "tsinghua_images": 18622
+   },
+   {
+    "cos_ge": 0.8,
+    "pairs": 18868,
+    "phash_le": 8,
+    "stanford_images": 18575,
+    "tsinghua_images": 18642
+   },
+   {
+    "cos_ge": 0.85,
+    "pairs": 18858,
+    "phash_le": 8,
+    "stanford_images": 18574,
+    "tsinghua_images": 18639
+   },
+   {
+    "cos_ge": 0.9,
+    "pairs": 18856,
+    "phash_le": 8,
+    "stanford_images": 18574,
+    "tsinghua_images": 18639
+   },
+   {
+    "cos_ge": 0.95,
+    "pairs": 18827,
+    "phash_le": 8,
+    "stanford_images": 18573,
+    "tsinghua_images": 18633
+   },
+   {
+    "cos_ge": 0.8,
+    "pairs": 18982,
+    "phash_le": 10,
+    "stanford_images": 18578,
+    "tsinghua_images": 18664
+   },
+   {
+    "cos_ge": 0.85,
+    "pairs": 18950,
+    "phash_le": 10,
+    "stanford_images": 18577,
+    "tsinghua_images": 18653
+   },
+   {
+    "cos_ge": 0.9,
+    "pairs": 18935,
+    "phash_le": 10,
+    "stanford_images": 18577,
+    "tsinghua_images": 18650
+   },
+   {
+    "cos_ge": 0.95,
+    "pairs": 18899,
+    "phash_le": 10,
+    "stanford_images": 18576,
+    "tsinghua_images": 18641
+   }
+  ],
+  "stanford_test_clean": 973,
+  "stanford_test_in_tsinghua_trainval": 6482,
+  "with_descriptor": {
+   "note": "images outside the train/val/test split have no cached descriptor; their pairs carry pHash only and cannot be confirmed",
+   "stanford": 20507,
+   "tsinghua": 70342
+  }
+ },
+ "ilsvrc_overlap": {
+  "ilsvrc_train_images": 1281167,
+  "ilsvrc_train_list": "train.txt in caffe_ilsvrc12.tar.gz (BVLC Caffe, dl.caffe.berkeleyvision.org)",
+  "ilsvrc_train_list_sha256": "55a0a92c2762655087e447ddd97dd27ba81dd1839a615e1bb598d04dac477d48",
+  "stanford_classes": 120,
+  "stanford_classes_in_ilsvrc1k": 120,
+  "stanford_ourspl_excluded": {
+   "images": 73,
+   "in_ilsvrc2012_train": 73
+  },
+  "stanford_ourspl_test": {
+   "images": 8580,
+   "in_ilsvrc2012_train": 8580
+  },
+  "stanford_ourspl_train": {
+   "images": 10728,
+   "in_ilsvrc2012_train": 10728
+  },
+  "stanford_ourspl_val": {
+   "images": 1199,
+   "in_ilsvrc2012_train": 1199
+  },
+  "stanford_test": {
+   "images": 8580,
+   "in_ilsvrc2012_train": 8580
+  },
+  "stanford_train": {
+   "images": 12000,
+   "in_ilsvrc2012_train": 12000
+  },
+  "tsinghua_split_values": [
+   "excluded",
+   "test",
+   "train",
+   "val"
+  ],
+  "tsinghua_test_confirmed_copy": {
+   "copy_in_ilsvrc2012_train": 3115,
+   "images": 3115
+  },
+  "tsinghua_train_confirmed_copy": {
+   "copy_in_ilsvrc2012_train": 13976,
+   "images": 13976
+  },
+  "tsinghua_val_confirmed_copy": {
+   "copy_in_ilsvrc2012_train": 1584,
+   "images": 1584
+  }
+ },
+ "stanford": {
+  "class_balance_test": {
+   "classes": 120,
+   "gini": 0.1719949494949495,
+   "imbalance_ratio": 3.1666666666666665,
+   "max": 152,
+   "median": 59.5,
+   "min": 48,
+   "split": "test"
+  },
+  "class_balance_train": {
+   "classes": 120,
+   "gini": 0.0,
+   "imbalance_ratio": 1.0,
+   "max": 100,
+   "median": 100.0,
+   "min": 100,
+   "split": "train"
+  },
+  "dataset": "stanford",
+  "dup_group": null,
+  "exact_duplicate_groups": 89,
+  "exact_pairs_by_kind": {
+   "test-test": 12,
+   "train-test": 37,
+   "train-train": 40
+  },
+  "exact_pairs_label_conflicts": 37,
+  "images_listed": 20580,
+  "label_conflict_examples": [
+   [
+    "n02085782-Japanese_spaniel/n02085782_2459.jpg",
+    "n02097474-Tibetan_terrier/n02097474_1962.jpg",
+    0
+   ],
+   [
+    "n02085782-Japanese_spaniel/n02085782_313.jpg",
+    "n02086646-Blenheim_spaniel/n02086646_280.jpg",
+    0
+   ],
+   [
+    "n02085782-Japanese_spaniel/n02085782_186.jpg",
+    "n02086646-Blenheim_spaniel/n02086646_172.jpg",
+    0
+   ],
+   [
+    "n02088466-bloodhound/n02088466_7462.jpg",
+    "n02090379-redbone/n02090379_3300.jpg",
+    0
+   ],
+   [
+    "n02089867-Walker_hound/n02089867_2653.jpg",
+    "n02089973-English_foxhound/n02089973_2905.jpg",
+    0
+   ],
+   [
+    "n02089867-Walker_hound/n02089867_3608.jpg",
+    "n02089973-English_foxhound/n02089973_1076.jpg",
+    2
+   ],
+   [
+    "n02089867-Walker_hound/n02089867_2880.jpg",
+    "n02089973-English_foxhound/n02089973_3160.jpg",
+    2
+   ],
+   [
+    "n02089973-English_foxhound/n02089973_2211.jpg",
+    "n02089867-Walker_hound/n02089867_3840.jpg",
+    0
+   ],
+   [
+    "n02089973-English_foxhound/n02089973_2093.jpg",
+    "n02089867-Walker_hound/n02089867_1882.jpg",
+    0
+   ],
+   [
+    "n02093256-Staffordshire_bullterrier/n02093256_5988.jpg",
+    "n02093428-American_Staffordshire_terrier/n02093428_1378.jpg",
+    0
+   ],
+   [
+    "n02093256-Staffordshire_bullterrier/n02093256_4090.jpg",
+    "n02093428-American_Staffordshire_terrier/n02093428_5635.jpg",
+    0
+   ],
+   [
+    "n02093991-Irish_terrier/n02093991_114.jpg",
+    "n02095314-wire-haired_fox_terrier/n02095314_80.jpg",
+    0
+   ],
+   [
+    "n02094114-Norfolk_terrier/n02094114_1696.jpg",
+    "n02094258-Norwich_terrier/n02094258_1408.jpg",
+    0
+   ],
+   [
+    "n02094258-Norwich_terrier/n02094258_880.jpg",
+    "n02094114-Norfolk_terrier/n02094114_1020.jpg",
+    0
+   ],
+   [
+    "n02095314-wire-haired_fox_terrier/n02095314_3166.jpg",
+    "n02095889-Sealyham_terrier/n02095889_1820.jpg",
+    0
+   ],
+   [
+    "n02095314-wire-haired_fox_terrier/n02095314_2754.jpg",
+    "n02095570-Lakeland_terrier/n02095570_3101.jpg",
+    0
+   ],
+   [
+    "n02095314-wire-haired_fox_terrier/n02095314_2964.jpg",
+    "n02095570-Lakeland_terrier/n02095570_5404.jpg",
+    0
+   ],
+   [
+    "n02095314-wire-haired_fox_terrier/n02095314_2038.jpg",
+    "n02095570-Lakeland_terrier/n02095570_95.jpg",
+    0
+   ],
+   [
+    "n02095314-wire-haired_fox_terrier/n02095314_3495.jpg",
+    "n02093859-Kerry_blue_terrier/n02093859_1697.jpg",
+    0
+   ],
+   [
+    "n02095570-Lakeland_terrier/n02095570_1575.jpg",
+    "n02095889-Sealyham_terrier/n02095889_1582.jpg",
+    0
+   ],
+   [
+    "n02095570-Lakeland_terrier/n02095570_6443.jpg",
+    "n02095314-wire-haired_fox_terrier/n02095314_3509.jpg",
+    0
+   ],
+   [
+    "n02097047-miniature_schnauzer/n02097047_951.jpg",
+    "n02097209-standard_schnauzer/n02097209_583.jpg",
+    0
+   ],
+   [
+    "n02097047-miniature_schnauzer/n02097047_2426.jpg",
+    "n02097209-standard_schnauzer/n02097209_1170.jpg",
+    0
+   ],
+   [
+    "n02097474-Tibetan_terrier/n02097474_4907.jpg",
+    "n02098105-soft-coated_wheaten_terrier/n02098105_2456.jpg",
+    0
+   ],
+   [
+    "n02105056-groenendael/n02105056_2194.jpg",
+    "n02104365-schipperke/n02104365_9552.jpg",
+    0
+   ],
+   [
+    "n02105251-briard/n02105251_7647.jpg",
+    "n02091134-whippet/n02091134_16337.jpg",
+    0
+   ],
+   [
+    "n02106030-collie/n02106030_873.jpg",
+    "n02106166-Border_collie/n02106166_346.jpg",
+    0
+   ],
+   [
+    "n02106030-collie/n02106030_10021.jpg",
+    "n02106166-Border_collie/n02106166_4107.jpg",
+    0
+   ],
+   [
+    "n02106030-collie/n02106030_2522.jpg",
+    "n02106166-Border_collie/n02106166_1031.jpg",
+    0
+   ],
+   [
+    "n02106030-collie/n02106030_15829.jpg",
+    "n02106166-Border_collie/n02106166_6512.jpg",
+    0
+   ]
+  ],
+  "missing": 0,
+  "modes": {
+   "RGB": 20579,
+   "RGBA": 1
+  },
+  "phash_near_pairs": 156,
+  "phash_pairs_by_kind": {
+   "test-test": 24,
+   "train-test": 74,
+   "train-train": 58
+  },
+  "phash_pairs_label_conflicts": 48,
+  "splits": {
+   "excluded": 73,
+   "test": 8580,
+   "train": 10728,
+   "val": 1199
+  },
+  "train_excluded_as_test_duplicates": 73,
+  "undecodable": 0,
+  "undecodable_examples": []
+ },
+ "stanford_clean_test": {
+  "n_ids": 973,
+  "rule": "Stanford test images with no candidate match (pHash <= 12 or cosine >= 0.8) to any Tsinghua train or val image"
+ },
+ "tsinghua": {
+  "class_balance_test": {
+   "classes": 130,
+   "gini": 0.0,
+   "imbalance_ratio": 1.0,
+   "max": 40,
+   "median": 40.0,
+   "min": 40,
+   "split": "test"
+  },
+  "class_balance_train": {
+   "classes": 130,
+   "gini": 0.5916968173177163,
+   "imbalance_ratio": 46.30625,
+   "max": 7409,
+   "median": 185.0,
+   "min": 160,
+   "split": "train"
+  },
+  "dataset": "tsinghua",
+  "dup_group": null,
+  "exact_duplicate_groups": 114,
+  "exact_pairs_by_kind": {
+   "test-test": 1,
+   "train-test": 13,
+   "train-train": 108
+  },
+  "exact_pairs_label_conflicts": 57,
+  "images_listed": 70428,
+  "label_conflict_examples": [
+   [
+    "1160-n000003-Siberian_husky/n102240.jpg",
+    "232-n000083-Eskimo_dog/n123309.jpg",
+    0
+   ],
+   [
+    "1160-n000003-Siberian_husky/n102266.jpg",
+    "232-n000083-Eskimo_dog/n123357.jpg",
+    0
+   ],
+   [
+    "1936-n000005-Pomeranian/n105296.jpg",
+    "216-n000017-Lakeland_terrier/n109113.jpeg",
+    4
+   ],
+   [
+    "1936-n000005-Pomeranian/n105738.jpeg",
+    "420-n000124-Chihuahua/n155136.jpeg",
+    0
+   ],
+   [
+    "1936-n000005-Pomeranian/n106535.jpeg",
+    "253-n000107-Japanese_Spitzes/n133193.jpeg",
+    0
+   ],
+   [
+    "1936-n000005-Pomeranian/n106537.jpeg",
+    "253-n000107-Japanese_Spitzes/n133195.jpeg",
+    0
+   ],
+   [
+    "200-n000008-Airedale/n107026.jpg",
+    "207-n000036-Irish_terrier/n113709.jpg",
+    2
+   ],
+   [
+    "200-n000008-Airedale/n107030.jpg",
+    "207-n000036-Irish_terrier/n113747.jpg",
+    0
+   ],
+   [
+    "211-n000009-cairn/n107231.jpg",
+    "231-n000081-silky_terrier/n122721.jpg",
+    4
+   ],
+   [
+    "200-n000010-miniature_poodle/n107509.jpg",
+    "2925-n000114-toy_poodle/n140174.jpg",
+    0
+   ],
+   [
+    "200-n000010-miniature_poodle/n107511.jpg",
+    "2925-n000114-toy_poodle/n140175.jpg",
+    0
+   ],
+   [
+    "200-n000010-miniature_poodle/n107532.jpg",
+    "316-n000118-standard_poodle/n146574.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108718.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122309.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108747.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122281.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108832.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122458.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108854.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122302.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108866.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122369.jpg",
+    0
+   ],
+   [
+    "203-n000015-Staffordshire_bullterrier/n108870.jpg",
+    "216-n000078-American_Staffordshire_terrier/n122476.jpg",
+    0
+   ],
+   [
+    "203-n000016-Norwich_terrier/n109012.jpg",
+    "203-n000027-Norfolk_terrier/n110999.jpg",
+    0
+   ],
+   [
+    "203-n000016-Norwich_terrier/n109095.jpg",
+    "203-n000027-Norfolk_terrier/n111012.jpg",
+    0
+   ],
+   [
+    "216-n000017-Lakeland_terrier/n109139.jpg",
+    "211-n000058-Sealyham_terrier/n118060.jpg",
+    0
+   ],
+   [
+    "216-n000017-Lakeland_terrier/n109182.jpg",
+    "226-n000057-wire_haired_fox_terrier/n117949.jpg",
+    0
+   ],
+   [
+    "216-n000017-Lakeland_terrier/n109254.jpg",
+    "226-n000057-wire_haired_fox_terrier/n117960.jpg",
+    0
+   ],
+   [
+    "216-n000017-Lakeland_terrier/n109294.jpg",
+    "226-n000057-wire_haired_fox_terrier/n117921.jpg",
+    0
+   ],
+   [
+    "216-n000017-Lakeland_terrier/n109300.jpg",
+    "211-n000058-Sealyham_terrier/n118249.jpg",
+    0
+   ],
+   [
+    "202-n000023-Welsh_springer_spaniel/n109551.jpg",
+    "276-n000112-English_springer/n136666.jpg",
+    0
+   ],
+   [
+    "202-n000020-Australian_terrier/n109790.jpg",
+    "231-n000081-silky_terrier/n122740.jpg",
+    2
+   ],
+   [
+    "203-n000021-Tibetan_terrier/n109971.jpg",
+    "249-n000106-Japanese_spaniel/n132608.jpg",
+    0
+   ],
+   [
+    "203-n000021-Tibetan_terrier/n110100.jpg",
+    "361-n000123-Shih_Tzu/n154581.jpg",
+    0
+   ],
+   [
+    "203-n000022-English_setter/n110246.jpg",
+    "232-n000076-Brittany_spaniel/n121625.jpg",
+    2
+   ]
+  ],
+  "missing": 0,
+  "modes": {
+   "RGB": 70427,
+   "RGBA": 1
+  },
+  "phash_near_pairs": 700,
+  "phash_pairs_by_kind": {
+   "test-test": 9,
+   "train-test": 87,
+   "train-train": 604
+  },
+  "phash_pairs_label_conflicts": 113,
+  "splits": {
+   "excluded": 86,
+   "test": 5200,
+   "train": 58627,
+   "val": 6515
+  },
+  "train_excluded_as_test_duplicates": 86,
+  "undecodable": 0,
+  "undecodable_examples": []
+ }
+}

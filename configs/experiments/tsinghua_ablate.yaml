@@ -1,0 +1,31 @@
+# Ablations on Tsinghua Dogs: same features, epochs and seeds as tsinghua_main; one factor changed
+# per run. Learning rates are not re-tuned: each run uses the rate selected on validation for its
+# base head in tsinghua_main (lr_like).
+name: tsinghua_ablate
+dataset: tsinghua
+backbone: dinov2_vitb14_reg
+img_size: 224
+feature_tag: pca256
+token_dims: 128
+views: [orig, hflip]
+max_device_fraction: 0.85
+seeds: [0, 1, 2]
+lr_selection_from: tsinghua_main
+common: {epochs: 30, batch_size: 256, patience: 8}
+runs:
+  # shortlist size K (main study: K = 5). K = 2: rival == pairwise exactly (design.md, Fact 4)
+  - {tag: rr_rival_k2, head: {name: rerank, mode: rival, k: 2}, lr_like: rr_rival}
+  - {tag: rr_rival_k3, head: {name: rerank, mode: rival, k: 3}, lr_like: rr_rival}
+  - {tag: rr_rival_k10, head: {name: rerank, mode: rival, k: 10}, lr_like: rr_rival}
+  - {tag: rr_class_k2, head: {name: rerank, mode: class, k: 2}, lr_like: rr_class}
+  - {tag: rr_class_k3, head: {name: rerank, mode: class, k: 3}, lr_like: rr_class}
+  - {tag: rr_class_k10, head: {name: rerank, mode: class, k: 10}, lr_like: rr_class}
+  - {tag: rr_pairwise_k3, head: {name: rerank, mode: pairwise, k: 3}, lr_like: rr_pairwise}
+  - {tag: rr_pairwise_k10, head: {name: rerank, mode: pairwise, k: 10}, lr_like: rr_pairwise}
+  # pairwise aggregation: hard minimum (t = 0) and a near-mean (t = 3); main study t = 1
+  - {tag: rr_pairwise_t0, head: {name: rerank, mode: pairwise, k: 5, pair_temp: 0.0}, lr_like: rr_pairwise}
+  - {tag: rr_pairwise_t3, head: {name: rerank, mode: pairwise, k: 5, pair_temp: 3.0}, lr_like: rr_pairwise}
+  # training choices of the proposed head
+  - {tag: rr_rival_candloss, head: {name: rerank, mode: rival, k: 5}, loss: candidate, lr_like: rr_rival}
+  - {tag: rr_rival_nogt, head: {name: rerank, mode: rival, k: 5, gt_insert: false}, lr_like: rr_rival}
+  - {tag: rr_rival_notokdrop, head: {name: rerank, mode: rival, k: 5}, token_drop: 0.0, lr_like: rr_rival}

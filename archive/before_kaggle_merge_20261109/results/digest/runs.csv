@@ -1,0 +1,161 @@
+experiment,run,tag,seed,lr,head,loss,val_top1,val_top5,val_nll,val_top1_global,val_cand_recall,best_epoch,epochs_run,params,train_sec
+stanford_main,attnprobe_lr0.0003_s0,attnprobe,0,0.0003,"{""name"": ""attnprobe""}",full,0.85905,0.98165,0.6761,,,2,11,379256,19.38
+stanford_main,attnprobe_lr0.001_s0,attnprobe,0,0.001,"{""name"": ""attnprobe""}",full,0.85655,0.97248,0.68823,,,8,17,379256,30.556
+stanford_main,attnprobe_lr0.003_s0,attnprobe,0,0.003,"{""name"": ""attnprobe""}",full,0.85905,0.96747,0.74272,,,15,24,379256,43.725
+stanford_main,attnprobe_s0,attnprobe,0,0.0003,"{""name"": ""attnprobe""}",full,0.85905,0.98165,0.6761,,,2,11,379256,19.38
+stanford_main,attnprobe_s1,attnprobe,1,0.0003,"{""name"": ""attnprobe""}",full,0.86239,0.98332,0.66058,,,3,12,379256,21.659
+stanford_main,attnprobe_s2,attnprobe,2,0.0003,"{""name"": ""attnprobe""}",full,0.86489,0.97665,0.65759,,,17,26,379256,47.966
+stanford_main,classattn_all_lr0.0003_s0,classattn_all,0,0.0003,"{""name"": ""classattn_all""}",full,0.87573,0.97832,0.62525,0.87573,,17,26,284281,87.807
+stanford_main,classattn_all_lr0.001_s0,classattn_all,0,0.001,"{""name"": ""classattn_all""}",full,0.86989,0.96914,0.66102,0.86906,,7,16,284281,53.697
+stanford_main,classattn_all_lr0.003_s0,classattn_all,0,0.003,"{""name"": ""classattn_all""}",full,0.86489,0.9608,0.74774,0.85738,,14,23,284281,74.446
+stanford_main,classattn_all_s0,classattn_all,0,0.0003,"{""name"": ""classattn_all""}",full,0.87573,0.97832,0.62525,0.87573,,17,26,284281,87.807
+stanford_main,classattn_all_s1,classattn_all,1,0.0003,"{""name"": ""classattn_all""}",full,0.87573,0.97832,0.62008,0.8749,,15,24,284281,79.303
+stanford_main,classattn_all_s2,classattn_all,2,0.0003,"{""name"": ""classattn_all""}",full,0.87573,0.98165,0.60984,0.87573,,11,20,284281,67.35
+stanford_main,linear_lr0.0003_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.8774,0.97998,0.61851,0.8774,,17,26,187512,17.314
+stanford_main,linear_lr0.001_s0,linear,0,0.001,"{""name"": ""linear""}",full,0.86906,0.98165,0.61839,0.86906,,3,12,187512,7.0902
+stanford_main,linear_lr0.003_s0,linear,0,0.003,"{""name"": ""linear""}",full,0.86656,0.97164,0.70285,0.86656,,8,17,187512,12.12
+stanford_main,linear_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.8774,0.97998,0.61851,0.8774,,17,26,187512,17.314
+stanford_main,linear_s1,linear,1,0.0003,"{""name"": ""linear""}",full,0.8749,0.98165,0.61452,0.8749,,5,14,187512,10.741
+stanford_main,linear_s2,linear,2,0.0003,"{""name"": ""linear""}",full,0.87323,0.97915,0.61045,0.87323,,12,21,187512,14.62
+stanford_main,rr_center_lr0.0003_s0,rr_center,0,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87656,0.97832,0.61727,0.87573,0.97915,17,26,284281,51.244
+stanford_main,rr_center_lr0.001_s0,rr_center,0,0.001,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.86822,0.97248,0.64134,0.86989,0.97331,6,15,284281,29.48
+stanford_main,rr_center_lr0.003_s0,rr_center,0,0.003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.85988,0.96163,0.75897,0.86072,0.9658,14,23,284281,45.184
+stanford_main,rr_center_s0,rr_center,0,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87656,0.97832,0.61727,0.87573,0.97915,17,26,284281,51.244
+stanford_main,rr_center_s1,rr_center,1,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87323,0.98165,0.60775,0.87156,0.98165,5,14,284281,26.704
+stanford_main,rr_center_s2,rr_center,2,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87823,0.98082,0.60344,0.8749,0.98082,11,20,284281,38.333
+stanford_main,rr_class_lr0.0003_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.8749,0.97832,0.61514,0.87573,0.97915,17,26,284281,50.737
+stanford_main,rr_class_lr0.001_s0,rr_class,0,0.001,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86906,0.96997,0.65357,0.86739,0.96997,7,16,284281,32.003
+stanford_main,rr_class_lr0.003_s0,rr_class,0,0.003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86155,0.9633,0.77327,0.86155,0.9633,14,23,284281,45.604
+stanford_main,rr_class_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.8749,0.97832,0.61514,0.87573,0.97915,17,26,284281,50.737
+stanford_main,rr_class_s1,rr_class,1,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87573,0.97832,0.61103,0.8749,0.97832,15,24,284281,46.345
+stanford_main,rr_class_s2,rr_class,2,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87656,0.98082,0.60214,0.8749,0.98082,11,20,284281,37.449
+stanford_main,rr_pairwise_lr0.0003_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87573,0.98082,0.61811,0.87156,0.98165,11,20,284281,43.573
+stanford_main,rr_pairwise_lr0.001_s0,rr_pairwise,0,0.001,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86739,0.98082,0.61891,0.86739,0.98165,3,12,284281,26.955
+stanford_main,rr_pairwise_lr0.003_s0,rr_pairwise,0,0.003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86155,0.96914,0.71723,0.85988,0.96497,8,17,284281,38.131
+stanford_main,rr_pairwise_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87573,0.98082,0.61811,0.87156,0.98165,11,20,284281,43.573
+stanford_main,rr_pairwise_s1,rr_pairwise,1,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87323,0.98165,0.61191,0.87073,0.98165,5,14,284281,31.564
+stanford_main,rr_pairwise_s2,rr_pairwise,2,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87656,0.97748,0.61943,0.8774,0.97748,16,25,284281,55.148
+stanford_main,rr_random_lr0.0003_s0,rr_random,0,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.87656,0.97915,0.61873,0.87573,0.97832,17,26,284281,51.548
+stanford_main,rr_random_lr0.001_s0,rr_random,0,0.001,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86906,0.96997,0.65459,0.86906,0.96997,7,16,284281,29.79
+stanford_main,rr_random_lr0.003_s0,rr_random,0,0.003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86239,0.9658,0.76177,0.86572,0.96497,17,26,284281,50.334
+stanford_main,rr_random_s0,rr_random,0,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.87656,0.97915,0.61873,0.87573,0.97832,17,26,284281,51.548
+stanford_main,rr_random_s1,rr_random,1,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.8749,0.97915,0.60991,0.8749,0.97915,13,22,284281,42.769
+stanford_main,rr_random_s2,rr_random,2,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.87907,0.97832,0.613,0.8774,0.97748,16,25,284281,50.113
+stanford_main,rr_rival_lr0.0003_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87573,0.98082,0.61814,0.87156,0.98165,11,20,284281,38.407
+stanford_main,rr_rival_lr0.001_s0,rr_rival,0,0.001,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86739,0.97998,0.61893,0.86739,0.98165,3,12,284281,23.456
+stanford_main,rr_rival_lr0.003_s0,rr_rival,0,0.003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86155,0.9658,0.71341,0.85988,0.96414,8,17,284281,33.777
+stanford_main,rr_rival_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87573,0.98082,0.61814,0.87156,0.98165,11,20,284281,38.407
+stanford_main,rr_rival_s1,rr_rival,1,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87323,0.98165,0.61192,0.87073,0.98165,5,14,284281,27.555
+stanford_main,rr_rival_s2,rr_rival,2,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87656,0.97748,0.61946,0.8774,0.97748,16,25,284281,48.544
+stanford_main,rr_rival_soft_lr0.0003_s0,rr_rival_soft,0,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.8749,0.98165,0.61634,0.87239,0.98165,11,20,284281,38.656
+stanford_main,rr_rival_soft_lr0.001_s0,rr_rival_soft,0,0.001,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.86739,0.97998,0.61778,0.86656,0.98165,3,12,284281,21.903
+stanford_main,rr_rival_soft_lr0.003_s0,rr_rival_soft,0,0.003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.85655,0.96497,0.79367,0.86739,0.96414,17,26,284281,49.325
+stanford_main,rr_rival_soft_s0,rr_rival_soft,0,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.8749,0.98165,0.61634,0.87239,0.98165,11,20,284281,38.656
+stanford_main,rr_rival_soft_s1,rr_rival_soft,1,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.87239,0.98165,0.60509,0.87239,0.98249,8,17,284281,33.453
+stanford_main,rr_rival_soft_s2,rr_rival_soft,2,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.87573,0.97832,0.61751,0.87656,0.97748,16,25,284281,46.269
+tsinghua_ablate,rr_class_k10_s0,rr_class_k10,0,0.0003,"{""k"": 10, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87107,0.98956,0.52537,0.86723,0.99555,19,28,302211,194.45
+tsinghua_ablate,rr_class_k10_s1,rr_class_k10,1,0.0003,"{""k"": 10, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86969,0.98956,0.52724,0.86738,0.9954,16,25,302211,175.56
+tsinghua_ablate,rr_class_k10_s2,rr_class_k10,2,0.0003,"{""k"": 10, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86984,0.98956,0.53067,0.86861,0.99524,11,20,302211,147.69
+tsinghua_ablate,rr_class_k2_s0,rr_class_k2,0,0.0003,"{""k"": 2, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86876,0.98895,0.51242,0.86754,0.9561,25,30,302211,160.6
+tsinghua_ablate,rr_class_k2_s1,rr_class_k2,1,0.0003,"{""k"": 2, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87153,0.98864,0.50875,0.86769,0.95687,23,30,302211,181.82
+tsinghua_ablate,rr_class_k2_s2,rr_class_k2,2,0.0003,"{""k"": 2, ""mode"": ""class"", ""name"": ""rerank""}",full,0.8703,0.9888,0.51182,0.86462,0.95733,29,30,302211,195.61
+tsinghua_ablate,rr_class_k3_s0,rr_class_k3,0,0.0003,"{""k"": 3, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86754,0.98864,0.51377,0.86662,0.97698,8,17,302211,116.78
+tsinghua_ablate,rr_class_k3_s1,rr_class_k3,1,0.0003,"{""k"": 3, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87137,0.98849,0.51033,0.86738,0.97928,22,30,302211,211.1
+tsinghua_ablate,rr_class_k3_s2,rr_class_k3,2,0.0003,"{""k"": 3, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87076,0.9888,0.51376,0.86738,0.97636,11,20,302211,145.17
+tsinghua_ablate,rr_pairwise_k10_s0,rr_pairwise_k10,0,0.0003,"{""k"": 10, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87076,0.99048,0.52328,0.86646,0.9957,21,30,302211,353.1
+tsinghua_ablate,rr_pairwise_k3_s0,rr_pairwise_k3,0,0.0003,"{""k"": 3, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86815,0.9888,0.51395,0.86754,0.97744,23,30,302211,221.93
+tsinghua_ablate,rr_pairwise_k3_s1,rr_pairwise_k3,1,0.0003,"{""k"": 3, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86922,0.98864,0.5123,0.86723,0.97866,22,30,302211,201.37
+tsinghua_ablate,rr_pairwise_k3_s2,rr_pairwise_k3,2,0.0003,"{""k"": 3, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86861,0.9891,0.51605,0.86462,0.9779,15,24,302211,151.0
+tsinghua_ablate,rr_rival_k10_s0,rr_rival_k10,0,0.0003,"{""k"": 10, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86815,0.98972,0.53019,0.86585,0.99524,8,17,302211,129.14
+tsinghua_ablate,rr_rival_k10_s1,rr_rival_k10,1,0.0003,"{""k"": 10, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87091,0.98987,0.51664,0.86646,0.9957,22,30,302211,206.42
+tsinghua_ablate,rr_rival_k10_s2,rr_rival_k10,2,0.0003,"{""k"": 10, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.87061,0.98926,0.52343,0.86784,0.9954,11,20,302211,120.41
+tsinghua_ablate,rr_rival_k2_s0,rr_rival_k2,0,0.0003,"{""k"": 2, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86969,0.98849,0.50837,0.86662,0.95687,21,30,302211,147.39
+tsinghua_ablate,rr_rival_k2_s1,rr_rival_k2,1,0.0003,"{""k"": 2, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86815,0.98864,0.50876,0.86723,0.95702,23,30,302211,164.25
+tsinghua_ablate,rr_rival_k2_s2,rr_rival_k2,2,0.0003,"{""k"": 2, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86907,0.98818,0.51188,0.866,0.95503,11,20,302211,112.91
+tsinghua_ablate,rr_rival_k3_s0,rr_rival_k3,0,0.0003,"{""k"": 3, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86708,0.98864,0.5276,0.86554,0.97728,8,17,302211,97.129
+tsinghua_ablate,rr_rival_k3_s1,rr_rival_k3,1,0.0003,"{""k"": 3, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86922,0.98849,0.51346,0.86662,0.97851,21,30,302211,168.54
+tsinghua_ablate,rr_rival_k3_s2,rr_rival_k3,2,0.0003,"{""k"": 3, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86815,0.98833,0.51343,0.866,0.97897,17,26,302211,164.57
+tsinghua_convnext_tiny,linear_lr0.0003_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.85649,0.98895,0.57274,0.85649,,14,23,101506,132.29
+tsinghua_convnext_tiny,linear_lr0.001_s0,linear,0,0.001,"{""name"": ""linear""}",full,0.85326,0.98833,0.58271,0.85326,,3,12,101506,51.171
+tsinghua_convnext_tiny,linear_lr0.003_s0,linear,0,0.003,"{""name"": ""linear""}",full,0.85572,0.98526,0.58588,0.85572,,19,28,101506,145.35
+tsinghua_convnext_tiny,rr_class_lr0.0003_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86278,0.98787,0.54131,0.85372,0.98787,8,17,200835,143.36
+tsinghua_convnext_tiny,rr_class_lr0.001_s0,rr_class,0,0.001,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.85986,0.98573,0.5499,0.85173,0.98634,5,14,200835,114.29
+tsinghua_convnext_tiny,rr_class_lr0.003_s0,rr_class,0,0.003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.85111,0.98557,0.57396,0.84559,0.98526,8,17,200835,139.75
+tsinghua_main,attnprobe_lr0.0003_s0,attnprobe,0,0.0003,"{""name"": ""attnprobe""}",full,0.86815,0.98895,0.53396,,,9,18,404866,136.04
+tsinghua_main,attnprobe_lr0.001_s0,attnprobe,0,0.001,"{""name"": ""attnprobe""}",full,0.86539,0.98987,0.54793,,,21,30,404866,216.06
+tsinghua_main,attnprobe_lr0.003_s0,attnprobe,0,0.003,"{""name"": ""attnprobe""}",full,0.86293,0.98787,0.56518,,,19,28,404866,236.36
+tsinghua_main,attnprobe_s0,attnprobe,0,0.0003,"{""name"": ""attnprobe""}",full,0.86815,0.98895,0.53396,,,9,18,404866,136.04
+tsinghua_main,attnprobe_s1,attnprobe,1,0.0003,"{""name"": ""attnprobe""}",full,0.86723,0.98956,0.52872,,,17,26,404866,207.25
+tsinghua_main,attnprobe_s2,attnprobe,2,0.0003,"{""name"": ""attnprobe""}",full,0.86892,0.98972,0.52616,,,24,30,404866,240.39
+tsinghua_main,classattn_all_lr0.0003_s0,classattn_all,0,0.0003,"{""name"": ""classattn_all""}",full,0.86754,0.98895,0.5359,0.86708,,9,18,302211,348.04
+tsinghua_main,classattn_all_lr0.001_s0,classattn_all,0,0.001,"{""name"": ""classattn_all""}",full,0.86324,0.98772,0.55177,0.86063,,11,20,302211,342.86
+tsinghua_main,classattn_all_lr0.003_s0,classattn_all,0,0.003,"{""name"": ""classattn_all""}",full,0.86063,0.98711,0.56249,0.85863,,11,20,302211,246.02
+tsinghua_main,classattn_all_s0,classattn_all,0,0.0003,"{""name"": ""classattn_all""}",full,0.86754,0.98895,0.5359,0.86708,,9,18,302211,348.04
+tsinghua_main,classattn_all_s1,classattn_all,1,0.0003,"{""name"": ""classattn_all""}",full,0.86846,0.9888,0.53421,0.86815,,24,30,302211,475.0
+tsinghua_main,classattn_all_s2,classattn_all,2,0.0003,"{""name"": ""classattn_all""}",full,0.8683,0.98849,0.53518,0.86892,,11,20,302211,344.67
+tsinghua_main,linear_lr0.0003_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.86784,0.98864,0.53555,0.86784,,24,30,202882,101.84
+tsinghua_main,linear_lr0.001_s0,linear,0,0.001,"{""name"": ""linear""}",full,0.86784,0.98741,0.54859,0.86784,,24,30,202882,105.79
+tsinghua_main,linear_lr0.003_s0,linear,0,0.003,"{""name"": ""linear""}",full,0.86493,0.98711,0.55466,0.86493,,24,30,202882,92.113
+tsinghua_main,linear_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.86784,0.98864,0.53555,0.86784,,24,30,202882,101.84
+tsinghua_main,linear_s1,linear,1,0.0003,"{""name"": ""linear""}",full,0.86861,0.98833,0.53487,0.86861,,20,29,202882,90.89
+tsinghua_main,linear_s2,linear,2,0.0003,"{""name"": ""linear""}",full,0.86922,0.98849,0.5362,0.86922,,11,20,202882,62.559
+tsinghua_main,rr_center_lr0.0003_s0,rr_center,0,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87061,0.9888,0.51899,0.86784,0.98864,24,30,302211,149.3
+tsinghua_main,rr_center_lr0.001_s0,rr_center,0,0.001,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.86662,0.98787,0.54812,0.86585,0.98757,24,30,302211,155.07
+tsinghua_main,rr_center_lr0.003_s0,rr_center,0,0.003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.86216,0.98634,0.55992,0.85833,0.98803,14,23,302211,243.83
+tsinghua_main,rr_center_s0,rr_center,0,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.87061,0.9888,0.51899,0.86784,0.98864,24,30,302211,149.3
+tsinghua_main,rr_center_s1,rr_center,1,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.8703,0.98926,0.51524,0.86754,0.98849,23,30,302211,310.68
+tsinghua_main,rr_center_s2,rr_center,2,0.0003,"{""k"": 5, ""mode"": ""center"", ""name"": ""rerank""}",full,0.86969,0.98849,0.518,0.868,0.98849,11,20,302211,210.15
+tsinghua_main,rr_class_lr0.0003_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86984,0.98895,0.5185,0.86477,0.9891,15,24,302211,124.25
+tsinghua_main,rr_class_lr0.001_s0,rr_class,0,0.001,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86723,0.98864,0.53096,0.86186,0.98849,9,18,302211,94.616
+tsinghua_main,rr_class_lr0.003_s0,rr_class,0,0.003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86324,0.98818,0.53755,0.85909,0.98726,9,18,302211,90.089
+tsinghua_main,rr_class_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.86984,0.98895,0.5185,0.86477,0.9891,15,24,302211,124.25
+tsinghua_main,rr_class_s1,rr_class,1,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87229,0.98895,0.51725,0.86723,0.9888,23,30,302211,326.88
+tsinghua_main,rr_class_s2,rr_class,2,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.87107,0.98864,0.51946,0.86677,0.98849,27,30,302211,314.87
+tsinghua_main,rr_pairwise_lr0.0003_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86815,0.9891,0.53112,0.86631,0.98895,8,17,302211,150.71
+tsinghua_main,rr_pairwise_lr0.001_s0,rr_pairwise,0,0.001,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86631,0.98787,0.54126,0.86293,0.98695,21,30,302211,254.83
+tsinghua_main,rr_pairwise_lr0.003_s0,rr_pairwise,0,0.003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86569,0.98634,0.54981,0.86032,0.98864,14,23,302211,203.63
+tsinghua_main,rr_pairwise_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86815,0.9891,0.53112,0.86631,0.98895,8,17,302211,150.71
+tsinghua_main,rr_pairwise_s1,rr_pairwise,1,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.87045,0.98895,0.51602,0.86554,0.98849,22,30,302211,177.77
+tsinghua_main,rr_pairwise_s2,rr_pairwise,2,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.86969,0.98895,0.51783,0.86508,0.98833,21,30,302211,179.31
+tsinghua_main,rr_random_lr0.0003_s0,rr_random,0,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86922,0.98833,0.52479,0.86631,0.98833,9,18,302211,221.36
+tsinghua_main,rr_random_lr0.001_s0,rr_random,0,0.001,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86539,0.98833,0.53514,0.86385,0.98803,9,18,302211,193.39
+tsinghua_main,rr_random_lr0.003_s0,rr_random,0,0.003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86262,0.98787,0.54133,0.85894,0.98726,9,18,302211,191.15
+tsinghua_main,rr_random_s0,rr_random,0,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86922,0.98833,0.52479,0.86631,0.98833,9,18,302211,221.36
+tsinghua_main,rr_random_s1,rr_random,1,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86907,0.98864,0.51956,0.86646,0.98864,17,26,302211,308.5
+tsinghua_main,rr_random_s2,rr_random,2,0.0003,"{""k"": 5, ""mode"": ""random"", ""name"": ""rerank""}",full,0.86953,0.98833,0.5245,0.8683,0.98833,11,20,302211,129.16
+tsinghua_main,rr_rival_lr0.0003_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86861,0.98972,0.52741,0.86585,0.98895,9,18,302211,195.17
+tsinghua_main,rr_rival_lr0.001_s0,rr_rival,0,0.001,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86631,0.98803,0.53913,0.86355,0.98695,21,30,302211,302.27
+tsinghua_main,rr_rival_lr0.003_s0,rr_rival,0,0.003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86569,0.98496,0.57024,0.86431,0.98695,24,30,302211,313.41
+tsinghua_main,rr_rival_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86861,0.98972,0.52741,0.86585,0.98895,9,18,302211,195.17
+tsinghua_main,rr_rival_s1,rr_rival,1,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86938,0.9891,0.51841,0.86631,0.98833,22,30,302211,178.07
+tsinghua_main,rr_rival_s2,rr_rival,2,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.86999,0.9888,0.52558,0.868,0.98833,11,20,302211,122.37
+tsinghua_main,rr_rival_soft_lr0.0003_s0,rr_rival_soft,0,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.86922,0.98941,0.52476,0.866,0.9891,8,17,302211,171.53
+tsinghua_main,rr_rival_soft_lr0.001_s0,rr_rival_soft,0,0.001,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.86539,0.98864,0.52941,0.86109,0.98787,9,18,302211,155.09
+tsinghua_main,rr_rival_soft_lr0.003_s0,rr_rival_soft,0,0.003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.86401,0.98726,0.557,0.85909,0.98833,11,20,302211,160.07
+tsinghua_main,rr_rival_soft_s0,rr_rival_soft,0,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.86922,0.98941,0.52476,0.866,0.9891,8,17,302211,171.53
+tsinghua_main,rr_rival_soft_s1,rr_rival_soft,1,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.87199,0.99002,0.50673,0.86539,0.98833,22,30,302211,172.33
+tsinghua_main,rr_rival_soft_s2,rr_rival_soft,2,0.0003,"{""k"": 5, ""mode"": ""rival_soft"", ""name"": ""rerank""}",full,0.87183,0.98941,0.51631,0.86769,0.98818,11,20,302211,100.24
+tsinghua_resnet50,linear_lr0.0003_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.84589,0.98404,0.60464,0.84589,,9,18,270466,121.04
+tsinghua_resnet50,linear_lr0.001_s0,linear,0,0.001,"{""name"": ""linear""}",full,0.84114,0.98296,0.6169,0.84114,,1,10,270466,63.604
+tsinghua_resnet50,linear_lr0.003_s0,linear,0,0.003,"{""name"": ""linear""}",full,0.82962,0.97943,0.66185,0.82962,,3,12,270466,45.474
+tsinghua_resnet50,linear_s0,linear,0,0.0003,"{""name"": ""linear""}",full,0.84589,0.98404,0.60464,0.84589,,9,18,270466,121.04
+tsinghua_resnet50,linear_s1,linear,1,0.0003,"{""name"": ""linear""}",full,0.84635,0.9845,0.60144,0.84635,,6,15,270466,69.959
+tsinghua_resnet50,linear_s2,linear,2,0.0003,"{""name"": ""linear""}",full,0.8482,0.9848,0.6092,0.8482,,4,13,270466,57.886
+tsinghua_resnet50,rr_class_lr0.0003_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.84666,0.98434,0.59122,0.84497,0.98434,9,18,369795,140.73
+tsinghua_resnet50,rr_class_lr0.001_s0,rr_class,0,0.001,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.8416,0.98281,0.60183,0.84068,0.98281,1,10,369795,61.415
+tsinghua_resnet50,rr_class_lr0.003_s0,rr_class,0,0.003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.82947,0.97866,0.64681,0.82947,0.97897,1,10,369795,59.404
+tsinghua_resnet50,rr_class_s0,rr_class,0,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.84666,0.98434,0.59122,0.84497,0.98434,9,18,369795,140.73
+tsinghua_resnet50,rr_class_s1,rr_class,1,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.84635,0.98419,0.58666,0.8462,0.98419,6,15,369795,109.07
+tsinghua_resnet50,rr_class_s2,rr_class,2,0.0003,"{""k"": 5, ""mode"": ""class"", ""name"": ""rerank""}",full,0.84758,0.98496,0.59115,0.8485,0.98496,4,13,369795,85.175
+tsinghua_resnet50,rr_pairwise_lr0.0003_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.84743,0.9848,0.58687,0.84359,0.98465,8,17,369795,113.94
+tsinghua_resnet50,rr_pairwise_lr0.001_s0,rr_pairwise,0,0.001,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.84328,0.98327,0.60472,0.83807,0.98342,3,12,369795,84.793
+tsinghua_resnet50,rr_pairwise_lr0.003_s0,rr_pairwise,0,0.003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.8307,0.97989,0.65469,0.82732,0.97836,3,12,369795,89.543
+tsinghua_resnet50,rr_pairwise_s0,rr_pairwise,0,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.84743,0.9848,0.58687,0.84359,0.98465,8,17,369795,113.94
+tsinghua_resnet50,rr_pairwise_s1,rr_pairwise,1,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.84835,0.98434,0.58538,0.8462,0.98434,6,15,369795,107.07
+tsinghua_resnet50,rr_pairwise_s2,rr_pairwise,2,0.0003,"{""k"": 5, ""mode"": ""pairwise"", ""name"": ""rerank""}",full,0.84743,0.98557,0.58951,0.84513,0.98542,5,14,369795,99.959
+tsinghua_resnet50,rr_rival_lr0.0003_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.84804,0.9848,0.5894,0.84282,0.9845,8,17,369795,110.22
+tsinghua_resnet50,rr_rival_lr0.001_s0,rr_rival,0,0.001,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.84252,0.98327,0.60691,0.83945,0.98388,3,12,369795,76.774
+tsinghua_resnet50,rr_rival_lr0.003_s0,rr_rival,0,0.003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.82978,0.97943,0.64668,0.82901,0.97943,1,10,369795,63.796
+tsinghua_resnet50,rr_rival_s0,rr_rival,0,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.84804,0.9848,0.5894,0.84282,0.9845,8,17,369795,110.22
+tsinghua_resnet50,rr_rival_s1,rr_rival,1,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.84866,0.9845,0.58897,0.84559,0.9845,6,15,369795,101.8
+tsinghua_resnet50,rr_rival_s2,rr_rival,2,0.0003,"{""k"": 5, ""mode"": ""rival"", ""name"": ""rerank""}",full,0.84758,0.98526,0.59391,0.84589,0.98526,5,14,369795,88.993

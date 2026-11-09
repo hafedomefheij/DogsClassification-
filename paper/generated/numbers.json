@@ -1,0 +1,558 @@
+{
+ "data": {
+  "tsinghua": {
+   "images_listed": 70428,
+   "splits": {
+    "excluded": 86,
+    "test": 5200,
+    "train": 58627,
+    "val": 6515
+   },
+   "exact_duplicate_groups": 114,
+   "phash_near_pairs": 700,
+   "phash_pairs_label_conflicts": 113,
+   "train_excluded_as_test_duplicates": 86,
+   "undecodable": 0
+  },
+  "stanford": {
+   "images_listed": 20580,
+   "splits": {
+    "excluded": 73,
+    "test": 8580,
+    "train": 10728,
+    "val": 1199
+   },
+   "exact_duplicate_groups": 89,
+   "phash_near_pairs": 156,
+   "phash_pairs_label_conflicts": 48,
+   "train_excluded_as_test_duplicates": 73,
+   "undecodable": 0
+  }
+ },
+ "cross": {
+  "candidate_pairs": 155728,
+  "confirmed_pairs": 19081,
+  "confirmed_tsinghua_images": 18675,
+  "confirmed_stanford_images": 18578,
+  "confirmed_by_split": {
+   "test|test": 1305,
+   "test|train": 1869,
+   "train|test": 6003,
+   "train|train": 8280,
+   "val|test": 678,
+   "val|train": 946
+  },
+  "confirmed_same_breed_name": 0.9883129814999214,
+  "stanford_test_in_tsinghua_trainval": 6482,
+  "stanford_test_clean": 973,
+  "rule": {
+   "cos_alone": 0.97,
+   "cos_pair": 0.85,
+   "phash_dist": 8
+  },
+  "with_descriptor": {
+   "note": "images outside the train/val/test split have no cached descriptor; their pairs carry pHash only and cannot be confirmed",
+   "stanford": 20507,
+   "tsinghua": 70342
+  }
+ },
+ "provenance": {
+  "tsinghua_main": {
+   "n": {
+    "all": 5200,
+    "stanford_origin": 3115,
+    "independent": 1362
+   },
+   "top1": {
+    "linear": {
+     "all": 0.86263,
+     "stanford_origin": 0.87705,
+     "independent": 0.81375
+    },
+    "attnprobe": {
+     "all": 0.86263,
+     "stanford_origin": 0.87608,
+     "independent": 0.81596
+    },
+    "classattn_all": {
+     "all": 0.86282,
+     "stanford_origin": 0.87747,
+     "independent": 0.81302
+    },
+    "rr_class": {
+     "all": 0.86712,
+     "stanford_origin": 0.88068,
+     "independent": 0.82012
+    },
+    "rr_center": {
+     "all": 0.86487,
+     "stanford_origin": 0.8778,
+     "independent": 0.81865
+    },
+    "rr_random": {
+     "all": 0.86429,
+     "stanford_origin": 0.87812,
+     "independent": 0.81669
+    },
+    "rr_rival": {
+     "all": 0.86737,
+     "stanford_origin": 0.88101,
+     "independent": 0.82085
+    },
+    "rr_rival_soft": {
+     "all": 0.87122,
+     "stanford_origin": 0.88443,
+     "independent": 0.82697
+    },
+    "rr_pairwise": {
+     "all": 0.86795,
+     "stanford_origin": 0.88047,
+     "independent": 0.82208
+    }
+   },
+   "comparisons": {
+    "rr_rival_soft:rr_class": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.004102533333333333
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.0037453
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.0068525
+     }
+    },
+    "rr_rival_soft:classattn_all": {
+     "all": {
+      "rule": "A>B",
+      "mean_diff": 0.008397466666666667
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.006955633333333333
+     },
+     "independent": {
+      "rule": "A>B",
+      "mean_diff": 0.013949999999999999
+     }
+    },
+    "rr_rival_soft:linear": {
+     "all": {
+      "rule": "A>B",
+      "mean_diff": 0.0085898
+     },
+     "stanford_origin": {
+      "rule": "A>B",
+      "mean_diff": 0.0073836
+     },
+     "independent": {
+      "rule": "A>B",
+      "mean_diff": 0.013215866666666666
+     }
+    },
+    "rr_rival:rr_class": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.00025641333333333336
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.00032102666666666667
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.0007342366666666667
+     }
+    },
+    "rr_rival:rr_center": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.0025000266666666666
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.003210233333333333
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.0022026333333333334
+     }
+    },
+    "rr_rival:rr_random": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.0030769333333333336
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.0028892666666666665
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.004160533333333333
+     }
+    },
+    "rr_pairwise:rr_class": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.0008333166666666666
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": -0.00021402
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.00195793
+     }
+    },
+    "rr_pairwise:rr_rival": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.0005769666666666667
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": -0.0005350333333333333
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.0012236666666666665
+     }
+    },
+    "rr_rival:classattn_all": {
+     "all": {
+      "rule": "A>B",
+      "mean_diff": 0.0045513
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.0035313
+     },
+     "independent": {
+      "rule": "A>B",
+      "mean_diff": 0.007831633333333332
+     }
+    },
+    "rr_rival:linear": {
+     "all": {
+      "rule": "A>B",
+      "mean_diff": 0.004743600000000001
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.003959333333333333
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.007097533333333334
+     }
+    },
+    "rr_class:linear": {
+     "all": {
+      "rule": "n.s.",
+      "mean_diff": 0.004487166666666666
+     },
+     "stanford_origin": {
+      "rule": "n.s.",
+      "mean_diff": 0.0036383
+     },
+     "independent": {
+      "rule": "n.s.",
+      "mean_diff": 0.006363066666666667
+     }
+    }
+   }
+  }
+ },
+ "transfer": {
+  "n_images": 973,
+  "n_breeds": 120
+ },
+ "hard_pairs": {
+  "tsinghua_main": {
+   "pairs": "toy_poodle~teddy:217 ; toy_poodle~Bichon_Frise:35 ; chinese_rural_dog~papillon:24 ; Bichon_Frise~teddy:21 ; Pomeranian~chinese_rural_dog:20 ; chinese_rural_dog~Labrador_retriever:17 ; Cardigan~chinese_rural_dog:15 ; toy_poodle~standard_poodle:13 ; Siberian_husky~Eskimo_dog:11 ; Siberian_husky~malamute:11 ; Staffordshire_bullterrier~American_Staffordshire_terrier:11 ; chinese_rural_dog~Pekinese:11 ; Border_collie~chinese_rural_dog:10 ; Pomeranian~Japanese_Spitzes:10 ; collie~Border_collie:9 ; chinese_rural_dog~golden_retriever:9 ; Labrador_retriever~golden_retriever:9 ; Australian_terrier~silky_terrier:8 ; Pembroke~Cardigan:8 ; chinese_rural_dog~Chihuahua:8",
+   "gains": {
+    "linear": {
+     "pair_gain": 0.0,
+     "overall_gain": 0.0
+    },
+    "attnprobe": {
+     "pair_gain": 0.009420000000000095,
+     "overall_gain": 0.0
+    },
+    "classattn_all": {
+     "pair_gain": 0.0029000000000000137,
+     "overall_gain": 0.00019000000000002348
+    },
+    "rr_class": {
+     "pair_gain": 0.006880000000000108,
+     "overall_gain": 0.004489999999999994
+    },
+    "rr_center": {
+     "pair_gain": 0.0032600000000000406,
+     "overall_gain": 0.0022400000000000198
+    },
+    "rr_random": {
+     "pair_gain": 0.003980000000000095,
+     "overall_gain": 0.0016599999999999948
+    },
+    "rr_rival": {
+     "pair_gain": 0.0115900000000001,
+     "overall_gain": 0.0047399999999999665
+    },
+    "rr_rival_soft": {
+     "pair_gain": 0.013400000000000079,
+     "overall_gain": 0.008589999999999987
+    },
+    "rr_pairwise": {
+     "pair_gain": 0.015580000000000038,
+     "overall_gain": 0.005319999999999991
+    }
+   }
+  },
+  "stanford_main": {
+   "pairs": "Eskimo_dog~Siberian_husky:5 ; collie~Border_collie:5 ; Italian_greyhound~whippet:4 ; kelpie~dingo:3 ; Australian_terrier~silky_terrier:3 ; Maltese_dog~Lhasa:3 ; Walker_hound~English_foxhound:3 ; Appenzeller~EntleBucher:3 ; miniature_schnauzer~standard_schnauzer:2 ; wire-haired_fox_terrier~Lakeland_terrier:2 ; Irish_terrier~Lakeland_terrier:2 ; Irish_terrier~soft-coated_wheaten_terrier:2 ; Boston_bull~French_bulldog:2 ; komondor~Old_English_sheepdog:2 ; golden_retriever~Labrador_retriever:2 ; kelpie~Appenzeller:2 ; Staffordshire_bullterrier~American_Staffordshire_terrier:2 ; Rhodesian_ridgeback~redbone:2 ; beagle~English_foxhound:2 ; beagle~Walker_hound:2",
+   "gains": {
+    "linear": {
+     "pair_gain": 0.0,
+     "overall_gain": 0.0
+    },
+    "attnprobe": {
+     "pair_gain": -0.026270000000000016,
+     "overall_gain": -0.01623999999999992
+    },
+    "classattn_all": {
+     "pair_gain": 0.00043000000000004146,
+     "overall_gain": 4.0000000000040004e-05
+    },
+    "rr_class": {
+     "pair_gain": -0.00029000000000001247,
+     "overall_gain": -0.0005799999999999139
+    },
+    "rr_center": {
+     "pair_gain": -0.0014499999999999513,
+     "overall_gain": -0.0006999999999999229
+    },
+    "rr_random": {
+     "pair_gain": -0.0027399999999999647,
+     "overall_gain": -0.0017399999999999638
+    },
+    "rr_rival": {
+     "pair_gain": -0.0018799999999999928,
+     "overall_gain": -0.0016299999999999093
+    },
+    "rr_rival_soft": {
+     "pair_gain": -0.0011599999999999389,
+     "overall_gain": -0.0008499999999999064
+    },
+    "rr_pairwise": {
+     "pair_gain": -0.0018799999999999928,
+     "overall_gain": -0.0015499999999999403
+    }
+   }
+  }
+ },
+ "hypotheses": {
+  "H1": {
+   "tsinghua_main": {
+    "best_proposed_by_val": "rr_rival_soft",
+    "best_control_by_val": "rr_class",
+    "pair_chosen_on": "tsinghua_main validation",
+    "own_val_pair": "rr_rival_soft:rr_class",
+    "own_val_pair_rule": "n.s.",
+    "rule": "n.s.",
+    "per_seed": [
+     0.0036538,
+     0.005,
+     0.0036538
+    ],
+    "all_proposed_vs_controls": {
+     "rr_rival:rr_class": "n.s.",
+     "rr_rival:rr_center": "n.s.",
+     "rr_rival:rr_random": "n.s.",
+     "rr_rival_soft:rr_class": "n.s.",
+     "rr_rival_soft:rr_center": "A>B",
+     "rr_rival_soft:rr_random": "A>B",
+     "rr_pairwise:rr_class": "n.s.",
+     "rr_pairwise:rr_center": "n.s.",
+     "rr_pairwise:rr_random": "n.s."
+    },
+    "by_subset": {
+     "all": "n.s.",
+     "stanford_origin": "n.s.",
+     "independent": "n.s."
+    }
+   },
+   "stanford_main": {
+    "best_proposed_by_val": "rr_rival_soft",
+    "best_control_by_val": "rr_class",
+    "pair_chosen_on": "tsinghua_main validation",
+    "own_val_pair": "rr_pairwise:rr_random",
+    "own_val_pair_rule": "n.s.",
+    "rule": "n.s.",
+    "per_seed": [
+     0.0004662,
+     0.0015152,
+     -0.0027972
+    ],
+    "all_proposed_vs_controls": {
+     "rr_rival:rr_class": "n.s.",
+     "rr_rival:rr_center": "n.s.",
+     "rr_rival:rr_random": "n.s.",
+     "rr_rival_soft:rr_class": "n.s.",
+     "rr_rival_soft:rr_center": "n.s.",
+     "rr_rival_soft:rr_random": "n.s.",
+     "rr_pairwise:rr_class": "n.s.",
+     "rr_pairwise:rr_center": "n.s.",
+     "rr_pairwise:rr_random": "n.s."
+    },
+    "by_subset": {}
+   },
+   "verdict": "refuted"
+  },
+  "H2": {
+   "tsinghua_main": {
+    "head": "rr_rival_soft",
+    "fix_rate": 0.019103,
+    "break_rate": 0.0067949,
+    "pair_gain": 0.013400000000000079,
+    "overall_gain": 0.008589999999999987,
+    "verdict": "supported"
+   },
+   "stanford_main": {
+    "head": "rr_rival_soft",
+    "fix_rate": 0.0041958,
+    "break_rate": 0.0041958,
+    "pair_gain": -0.0011599999999999389,
+    "overall_gain": -0.0008499999999999064,
+    "verdict": "refuted"
+   },
+   "verdict": "supported"
+  },
+  "H3": {
+   "tsinghua_main": {
+    "random": 0.86429,
+    "center": 0.86487,
+    "rival": 0.86737,
+    "seed_spread": 0.0023184,
+    "random_le_center": true,
+    "verdict": "supported"
+   },
+   "stanford_main": {
+    "random": 0.88159,
+    "center": 0.88263,
+    "rival": 0.8817,
+    "seed_spread": 0.0012335,
+    "random_le_center": true,
+    "verdict": "refuted"
+   },
+   "verdict": "supported"
+  },
+  "H4": {
+   "tsinghua_main": {
+    "rule": "n.s.",
+    "mean_diff": 0.0005769666666666667
+   },
+   "stanford_main": {
+    "rule": "n.s.",
+    "mean_diff": 7.77e-05
+   },
+   "verdict": "exploratory: no difference"
+  },
+  "H5": {
+   "tsinghua_main": {
+    "head": "rr_rival_soft",
+    "rule": "A>B",
+    "mean_diff": 0.008397466666666667,
+    "verdict": "supported (re-ranker better)"
+   },
+   "stanford_main": {
+    "head": "rr_rival_soft",
+    "rule": "n.s.",
+    "mean_diff": -0.0008935666666666668,
+    "verdict": "supported (no difference)"
+   },
+   "verdict": "supported (re-ranker better)"
+  },
+  "H7": {
+   "tsinghua_main": {
+    "head": "rr_rival_soft",
+    "gain_over_B0": {
+     "orig": 0.008589999999999987,
+     "blur": 0.030260000000000065,
+     "noise": 0.008329999999999949,
+     "jpeg": 0.007629999999999915,
+     "lowres": 0.017309999999999937,
+     "occlude": 0.026410000000000045
+    },
+    "views_gain_above_clean": [
+     "blur",
+     "lowres",
+     "occlude"
+    ],
+    "verdict": "exploratory"
+   },
+   "stanford_main": {
+    "head": "rr_rival_soft",
+    "gain_over_B0": {
+     "orig": -0.0008499999999999064,
+     "blur": -0.0022900000000000142,
+     "noise": -0.0013900000000000023,
+     "jpeg": -0.0022900000000000142,
+     "lowres": -0.0007000000000000339,
+     "occlude": -0.0018700000000000383
+    },
+    "views_gain_above_clean": [
+     "lowres"
+    ],
+    "verdict": "exploratory"
+   },
+   "verdict": "exploratory"
+  },
+  "H6": {
+   "top1": {
+    "2": 0.86853,
+    "3": 0.8691,
+    "5": 0.86737,
+    "10": 0.86519
+   },
+   "recall": {
+    "2": 0.94192,
+    "3": 0.96769,
+    "5": 0.98468,
+    "10": 0.99372
+   },
+   "monotone_fall_from_2": false,
+   "recall_rises": true,
+   "verdict": "supported"
+  }
+ },
+ "missing": [],
+ "written": [
+  "tab_data",
+  "tab_data_cross",
+  "tab_main_tsinghua",
+  "tab_main_stanford",
+  "tab_compare",
+  "tab_rerank",
+  "tab_provenance",
+  "tab_robust_tsinghua",
+  "tab_robust_stanford",
+  "tab_ablate_k",
+  "tab_ablate_other",
+  "tab_backbones",
+  "tab_tokens",
+  "tab_openset",
+  "tab_transfer",
+  "tab_efficiency",
+  "tab_explain",
+  "tab_hardpairs_tsinghua",
+  "tab_hardpairs_stanford",
+  "tab_lr",
+  "tab_hypotheses"
+ ]
+}

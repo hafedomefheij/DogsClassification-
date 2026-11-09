@@ -1,0 +1,8 @@
+# Queue B: Stanford-sized training and feature extraction (small GPU memory), alongside queue A.
+# Run: nohup bash scripts/queue.sh configs/queues/b.txt > /content/work/logs/queue_b.log 2>&1 &
+wait_stanford | while pgrep -f "[p]ipeline_stanford.sh" >/dev/null; do sleep 60; done
+stanford_main | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/stanford_main.yaml
+extract_resnet50 | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua resnet50 /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+extract_convnext_tiny | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua convnext_tiny /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+extract_clip_vitb16 | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua clip_vitb16 /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+END

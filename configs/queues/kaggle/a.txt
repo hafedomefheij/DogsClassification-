@@ -1,0 +1,15 @@
+# Kaggle, GPU 0 (the Colab GPU quota ran out on 2026-11-08; research log, "Moving the remaining GPU work to Kaggle").
+# The DINOv2 caches are rebuilt (orig and hflip only: these experiments read no other view; the saved token PCA is
+# reused), the frozen main heads and the finished ablation runs are checked on the rebuilt VALIDATION features,
+# the resume rule decides whether the finished ablation runs are kept, then the queue-A jobs of a.txt, unchanged
+# (the ablation refuses to start until the resume rule has been applied).
+# The /content paths point into /kaggle (scripts/kaggle_run.sh makes the links), so every command is as on Colab.
+extract_dinov2_k | cd /content/DogBreed-PhD-Research && AUTO_VIEWS= ANN_VIEWS= bash scripts/extract_all.sh tsinghua dinov2_vitb14_reg /content/data/raw/tsinghua_dogs/low-resolution.zip 256 224
+drift_main | cd /content/DogBreed-PhD-Research && python -I scripts/feature_drift_check.py --experiment tsinghua_main --out /content/work/results/drift/tsinghua_main.json
+drift_ablate | cd /content/DogBreed-PhD-Research && python -I scripts/feature_drift_check.py --experiment tsinghua_ablate --out /content/work/results/drift/tsinghua_ablate.json && python -I scripts/resume_policy.py --experiment tsinghua_ablate --drift /content/work/results/drift/tsinghua_ablate.json
+ablate | cd /content/DogBreed-PhD-Research && test -e /content/work/results/drift/tsinghua_ablate_policy.json && bash scripts/run_experiment.sh configs/experiments/tsinghua_ablate.yaml
+openset_split | cd /content/DogBreed-PhD-Research && python -I scripts/make_openset_split.py --dataset tsinghua --unknown 30 --seed 0
+openset | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_openset.yaml
+tok32 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_tok32.yaml
+tok64 | cd /content/DogBreed-PhD-Research && bash scripts/run_experiment.sh configs/experiments/tsinghua_tok64.yaml
+END

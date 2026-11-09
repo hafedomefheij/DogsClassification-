@@ -1,0 +1,14 @@
+\begin{tabular}{lp{4.2cm}p{2.6cm}p{8.4cm}}
+\toprule
+& Hypothesis & Verdict & Evidence (test split; decision rule of \S8) \\
+\midrule
+H1 & Shortlist conditioning beats equal-size controls & refuted & Tsinghua: rival-soft vs class (chosen on Tsinghua val): n.s., per seed +0.37/+0.50/+0.37 pp; Stanford-origin n.s.; independent n.s.; Stanford: rival-soft vs class (chosen on Tsinghua val): n.s., per seed +0.05/+0.15/-0.28 pp; own val pick pairwise vs random: n.s. \\
+H2 & It acts where it should & supported & Tsinghua: fix 1.91\% vs break 0.68\%; gain on pairs +1.34 vs overall +0.86 pp; Stanford: fix 0.42\% vs break 0.42\%; gain on pairs -0.12 vs overall -0.08 pp \\
+H3 & It is the confusion set, not contrast & supported & Tsinghua: random 86.43, centre 86.49, rival 86.74 (spread 0.23); Stanford: random 88.16, centre 88.26, rival 88.17 (spread 0.12) \\
+H4 & Pairwise adds beyond centring & exploratory: no difference & Tsinghua: n.s. (+0.06 pp); Stanford: n.s. (+0.01 pp) \\
+H5 & The shortlist costs nothing vs all classes & supported (re-ranker better) & Tsinghua: A>B (+0.84 pp); Stanford: n.s. (-0.09 pp) \\
+H6 & K behaves like a shortlist & not run & -- \\
+H7 & Robustness under corruptions & exploratory & Tsinghua (rival-soft $-$ B0, pp): clean +0.9, blur +3.0, noise +0.8, JPEG +0.8, low-res +1.7, occlude +2.6; Stanford (rival-soft $-$ B0, pp): clean -0.1, blur -0.2, noise -0.1, JPEG -0.2, low-res -0.1, occlude -0.2 \\
+\bottomrule
+\end{tabular}
+% verdicts computed by scripts/make_tables.py from the digest

@@ -1,0 +1,11 @@
+\begin{tabular}{llrrrrrl}
+\toprule
+Backbone & Pre-training & B0 & class & rival & pairwise & $\bar\Delta$ (rival$-$class) & Rule \\
+\midrule
+DINOv2 ViT-B/14 (reg.) & self-sup., LVD-142M & 86.26{\scriptsize$\,\pm\,$0.21} & 86.71{\scriptsize$\,\pm\,$0.10} & 86.74{\scriptsize$\,\pm\,$0.23} & \textbf{86.80{\scriptsize$\,\pm\,$0.12}} & +0.03 & no claim \\
+CLIP ViT-B/16 & image-text, WIT-400M & 78.24{\scriptsize$\,\pm\,$0.10} & 79.51{\scriptsize$\,\pm\,$0.14} & \textbf{79.83{\scriptsize$\,\pm\,$0.49}} & 79.62{\scriptsize$\,\pm\,$0.50} & +0.32 & no claim \\
+ConvNeXt-T & supervised IN-1k & 86.95{\scriptsize$\,\pm\,$0.12} & 87.65{\scriptsize$\,\pm\,$0.23} & 87.86{\scriptsize$\,\pm\,$0.06} & \textbf{87.89{\scriptsize$\,\pm\,$0.07}} & +0.21 & no claim \\
+ResNet-50 & supervised IN-1k & 85.59{\scriptsize$\,\pm\,$0.11} & 85.76{\scriptsize$\,\pm\,$0.01} & \textbf{85.85{\scriptsize$\,\pm\,$0.05}} & 85.79{\scriptsize$\,\pm\,$0.03} & +0.09 & no claim \\
+\bottomrule
+\end{tabular}
+% Tsinghua Dogs test top-1 (%); every head on the same frozen features
